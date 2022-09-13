@@ -1,1 +1,9 @@
-show page
+<div class="container">
+  <h1>show page</h1><br>
+
+  <%= @property.address %>
+
+  <%= render "key_statistics", property: @property %>
+  <%= render "transactions/form" %>
+  <%= render "transactions" %>
+</div>
