@@ -1,4 +1,4 @@
-Properties.destroy_all && User.destroy_all if Rails.env.development?
+Property.destroy_all && User.destroy_all if Rails.env.development?
 
 # Creating the users
 # james = User.create!(
@@ -18,7 +18,7 @@ Properties.destroy_all && User.destroy_all if Rails.env.development?
     #   email: "tony@dickys.com",
     #   password: "abcdef",
 #   password_confirmation: "abcdef"
-)
+# )
 
 # users = [james, angus, chris, tony]
 # categories = ["Apartment", "Villa", "Acreage", "Block of Units", "House", "Townhouse", "Land", "Rural", "Retirement Living"]
@@ -31,7 +31,7 @@ angus = User.create!(
 )
 
 # SEED CREATE
-properties = Properties.create!(
+properties = Property.create!(
   address: "2503 / 442-450 Elizabeth Street",
   # description: "Shimmering tower views and luxe styling.",
   bedrooms: 1,
@@ -44,7 +44,7 @@ properties = Properties.create!(
   # postcode: 3000
   user: angus,
   # price: 360000,
-  property_type: unit
+  property_type: "unit"
 )
 
 # PHOTO 1
@@ -60,7 +60,7 @@ properties.photo.attach(io: file, filename: properties.address)
 puts "#{properties.address} seeded"
 
 # SEED CREATE
-properties = Properties.create!(
+properties = Property.create!(
   address: "5509 / 560 Lonsdale Street",
   # description: "Grand Space, Style and Sophistication with Panoramic Bay Views.",
   bedrooms: 2,
@@ -73,7 +73,7 @@ properties = Properties.create!(
   # postcode: 3000
   user: angus,
   # price: 780000,
-  property_type: house
+  property_type: "house"
 )
 
 # PHOTO 1
@@ -89,7 +89,7 @@ properties.photo.attach(io: file, filename: properties.address)
 puts "#{properties.address} seeded"
 
 # SEED CREATE
-properties = Properties.create!(
+properties = Property.create!(
   address: "1703 / 161 Clarence Street",
   # description: "One Bedroom + Study Apartment with City Views in Arc by Crown.",
   bedrooms: 1,
@@ -102,7 +102,7 @@ properties = Properties.create!(
   # postcode: 2000
   user: angus,
   # price: 1000000,
-  property_type: unit
+  property_type: "unit"
 )
 
 # PHOTO 1
@@ -118,7 +118,7 @@ properties.photo.attach(io: file, filename: properties.address)
 puts "#{properties.address} seeded"
 
 # SEED CREATE
-properties = Properties.create!(
+properties = Property.create!(
   address: "34 / 180 Stirling Street",
   # description: "Luxury 1x1x1 in Zenith Apartment.",
   bedrooms: 1,
@@ -131,7 +131,7 @@ properties = Properties.create!(
   # postcode: 6000
   user: angus,
   # price: 675000,
-  property_type: house
+  property_type: "house"
 )
 
 # PHOTO 1
@@ -147,7 +147,7 @@ properties.photo.attach(io: file, filename: properties.address)
 puts "#{properties.address} seeded"
 
 
-properties = Properties.create!(
+properties = Property.create!(
   address: "843 Cambridge Road",
   # description: "Space and convenience in magnificent semi-rural property.",
   bedrooms: 5,
@@ -160,7 +160,7 @@ properties = Properties.create!(
   # postcode: 7170
   user: angus,
   # price: 1380000
-  property_type: unit
+  property_type: "unit"
 )
 
 # PHOTO 1
