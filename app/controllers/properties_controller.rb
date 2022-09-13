@@ -5,6 +5,8 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+    @transaction = Transaction.new
+    @transactions = Transaction.all
   end
 
   def new
