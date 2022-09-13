@@ -4,3 +4,14 @@
     <li><%= property.address %></li>
   <% end %>
 </ul>
+
+<br>
+<h1>Welcome Back<%= current_user.email%></h2>
+<h2>Pages#Dashboard</h2>
+<p>Find me in app/views/pages/home.html.erb</p>
+<ul>
+  <% @properties.each do |property| %>
+    <li><%= property.address %></li>
+    <li><%= property.bedrooms %></li>
+  <% end %>
+</ul>
