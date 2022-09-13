@@ -1,12 +1,11 @@
-<div class="container">
+<div class="container mt-3">
   <h1>Show Page</h1><br>
 
-  <%= @property.address %>
-  <%= @property.bedrooms %>
-  <%= @property.property_type %>
+  <%= @property.address %><br>
+  <%= @property.bedrooms %> bedrooms<br>
+  it is a <%= @property.property_type %>
 
   <%= render "key_statistics", property: @property %>
   <%= render "transactions/form" %>
   <%= render "transactions" %>
 </div>
-
