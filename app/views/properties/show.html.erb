@@ -6,6 +6,12 @@
   it is a <%= @property.property_type %>
 
   <%= render "key_statistics", property: @property %>
-  <%= render "transactions/form" %>
+
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= render "transactions/form" %>
+    </div>
+  </div>
+
   <%= render "transactions" %>
 </div>
