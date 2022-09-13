@@ -1,6 +1,12 @@
-<h1>Show Page</h1>
-<h3>
-<%= @property.address %>
-<%= @property.bedrooms %>
-<%= @property.property_type %>
-</h3>
+<div class="container">
+  <h1>Show Page</h1><br>
+
+  <%= @property.address %>
+  <%= @property.bedrooms %>
+  <%= @property.property_type %>
+
+  <%= render "key_statistics", property: @property %>
+  <%= render "transactions/form" %>
+  <%= render "transactions" %>
+</div>
+
