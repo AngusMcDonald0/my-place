@@ -1,0 +1,185 @@
+.overviewGutter{
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
+  display: flex;
+  --bs-gutter-x: 3rem;
+}
+
+.panel{
+    margin-bottom: 30px;
+    color: #696969;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+}
+
+
+.statsOverview--header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 20px 1px 20px;
+  border-radius: 5px 5px 0 0;
+  align-items: center;
+  background-color: #252525;
+}
+
+.statsOverview--body {
+  position: relative;
+  padding: 10px 20px 10px;
+  z-index: 0;
+}
+
+
+.statsOverview--headerIn{
+  color: #2bb3c0;
+}
+
+.statsOverview--headerInPercentage{
+  background-color: #2bb3c0;
+  color: white;
+  margin-left: auto;
+  padding: 0 10px;
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.fa-level-up-alt{
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.fa-money-bill-trend-up{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  margin-top: -40px;
+  font-size: 80px;
+  line-height: 80px;
+  opacity: .25;
+  z-index: -1;
+  color: #2bb3c0;
+}
+
+.statsOverview--rangeIn{
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  color: #2bb3c0;
+  margin-bottom: 0;
+}
+
+.statsOverview--dollarIn{
+  margin-top: 8px;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 300;
+  color: #2bb3c0;
+}
+
+.statsOverview--label{
+  color: #393939;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+
+// SECOND CARD//
+
+.statsOverview--headerOut{
+  color: #e16123
+}
+
+.statsOverview--headerOutPercentage{
+  background-color: #e16123;
+  color: white;
+  margin-left: auto;
+  padding: 0 10px;
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+#moneyflip{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  margin-top: -40px;
+  font-size: 80px;
+  line-height: 80px;
+  opacity: .25;
+  z-index: -1;
+  color: #e16123;
+  transform: scale(1, -1);
+}
+
+.statsOverview--rangeOut{
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  color: #e16123;
+  margin-bottom: 0;
+}
+
+.statsOverview--dollarOut{
+  margin-top: 8px;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 300;
+  color: #e16123;
+}
+
+
+// 3rd Card//
+
+.statsOverview--headerTotal{
+  color: #009378;
+}
+
+.statsOverview--headerTotalPercentage{
+  background-color: #009378;
+  color: white;
+  margin-left: auto;
+  padding: 0 10px;
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.fa-hand-holding-dollar{
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.fa-money-bill-transfer{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  margin-top: -40px;
+  font-size: 80px;
+  line-height: 80px;
+  opacity: .25;
+  z-index: -1;
+  color: #009378;
+}
+
+.statsOverview--rangeTotal{
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  color: #009378;
+  margin-bottom: 0;
+}
+
+.statsOverview--dollarTotal{
+  margin-top: 8px;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 300;
+  color: #009378;
+}
