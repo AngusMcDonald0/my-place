@@ -1,0 +1,10 @@
+<div class="container">
+<br>
+  <%= simple_form_for(@property) do |f| %>
+    <%= f.input :address %>
+    <%= f.input :bedrooms %>
+    <%= f.input :property_type, :collection => %w[Unit House] %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
