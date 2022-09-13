@@ -1,0 +1,8 @@
+<%= simple_form_for [@property, @transaction] do |t| %>
+    <%= t.input :cash_flow_type, :collection => %w[Revenue Expense] %>
+    <%= t.input :date %>
+    <%= t.input :category, :collection => %w[Maintenance Mortgage TO-DO] %>
+    <%= t.input :amount %>
+    <%= t.input :description %>
+    <%= t.submit %>
+  <% end %>

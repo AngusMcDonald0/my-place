@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <h1>myPlace <i class="fa-solid fa-house" id="logo"></i></h1>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
             <%= link_to "Add Property", new_property_path(@property), class: "nav-link text-white" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Home", properties_path, class: "nav-link text-white" %>
+            <%= link_to "Dashboard", properties_path, class: "nav-link text-white" %>
           </li>
 
           <li class="nav-item dropdown">

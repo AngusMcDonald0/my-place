@@ -1,12 +1,18 @@
-<div class="container">
+<div class="container mt-3">
   <h1>Show Page</h1><br>
-
-  <%= @property.address %>
-  <%= @property.bedrooms %>
-  <%= @property.property_type %>
+  <%= @property.address %><br>
+  <%= @property.bedrooms %> bedrooms<br>
+  it is a <%= @property.property_type %>
 
   <%= render "key_statistics", property: @property %>
-  <%= render "transactions/form" %>
-  <%= render "transactions" %>
-</div>
 
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= render "transactions/form" %>
+    </div>
+  </div>
+
+  <div class="section bg-primary bg-gradient">
+    <%= render "transactions" %>
+  </div>
+</div>
