@@ -18,6 +18,7 @@ Property.destroy_all && User.destroy_all if Rails.env.development?
     #   email: "tony@dickys.com",
     #   password: "abcdef",
 #   password_confirmation: "abcdef"
+
 # )
 
 # users = [james, angus, chris, tony]
@@ -57,6 +58,7 @@ properties.photo.attach(io: file, filename: properties.address)
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/3c9eb34377b5830fe2e56c4a2e7c7ddde1a79c2d2b786b98e01fcd830b6f4295/image.jpg")
 # properties.photo.attach(io: file, filename: properties.address)
 
+
 puts "#{properties.address} seeded"
 
 # SEED CREATE
@@ -74,6 +76,7 @@ properties = Property.create!(
   user: angus,
   # price: 780000,
   property_type: "house"
+
 )
 
 # PHOTO 1
@@ -85,6 +88,7 @@ properties.photo.attach(io: file, filename: properties.address)
 # # PHOTO 3
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/49ae6d73b7c6d797482f24164f4b9bf7d525a8bbbfbd921e7d1769e818c181cc/image.jpg")
 # properties.photo.attach(io: file, filename: properties.address)
+
 
 puts "#{properties.address} seeded"
 
@@ -147,6 +151,7 @@ properties.photo.attach(io: file, filename: properties.address)
 puts "#{properties.address} seeded"
 
 
+
 properties = Property.create!(
   address: "843 Cambridge Road",
   # description: "Space and convenience in magnificent semi-rural property.",
@@ -185,6 +190,7 @@ puts "#{properties.address} seeded"
 # )
 
 # file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+
 # equipment.photo.attach(io: file, filename: equipment.name)
 # puts "#{equipment.name} seeded"
 
@@ -198,6 +204,7 @@ puts "#{properties.address} seeded"
 #     price: rand(5..50)
 #   )
 #   file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+
 #   equipment.photo.attach(io: file, filename: equipment.name)
 #   puts "#{equipment.name} seeded"
 # end
