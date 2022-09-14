@@ -1,0 +1,6 @@
+<h2>Transactions</h2>
+<% @transactions.each do |transaction| %>
+  <ul>
+    <%= transaction.description %>, $<%= transaction.amount %>
+  </ul>
+<% end %>
