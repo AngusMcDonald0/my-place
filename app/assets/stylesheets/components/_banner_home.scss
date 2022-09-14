@@ -1,5 +1,5 @@
 .hero {
-  height: calc(100vh - 70px);
+  height: 100vh;
   overflow: hidden;
   width: 100%;
   background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
@@ -15,32 +15,12 @@
     left: 0;
     width: 100%;
   }
+
 }
 
 .content{
   text-align: center;
   z-index: 1;
-}
-
-.content h1{
-  font-size: 80px;
-  color: white;
-  font-weight: 600;
-  transition: 0.5s;
-}
-.content a:hover{
-  -webkit-text-stroke: 1px $orange;
-  color: transparent;
-}
-.content a{
-  text-decoration: none;
-  display: inline-block;
-  color: $orange;
-  font-size: 24px;
-  border: 2px solid $orange;
-  padding: 14px 70px;
-  border-radius: 30px;
-  margin-top: 20px;
 }
 
 @media (min-aspect-ratio: 16/9){

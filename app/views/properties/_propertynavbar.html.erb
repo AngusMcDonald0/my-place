@@ -1,0 +1,21 @@
+<section class="dashboard-header">
+  <div class="dashboard-container">
+
+    <div class="dashboard-row">
+      <div class="col-lg-6">
+        <%= link_to properties_path, class: "d-flex align-items-center back-btn" do %>
+          <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+          <p>All Properties</p>
+        <% end %>
+        <h2 class="dash-property text-start">Dashboard: <%= @property.address %></h2>
+      </div>
+
+      <div class="col-lg-6 d-flex align-items-center justify-content-end">
+        <div class="btn btn-primary" id="add-transaction-button" data-action="click->transactions#displayForm">+Add Transaction</div>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
