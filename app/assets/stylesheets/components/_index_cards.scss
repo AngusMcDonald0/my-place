@@ -1,7 +1,8 @@
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
+  margin: 10px 0px;
 }
 
 // Smallest device
@@ -29,12 +30,15 @@
   overflow: hidden;
   height: 120px;
   width: 100%;
-  background: rgb(50, 45, 74);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
-  margin: 10px;
   border-radius: 5px;
+}
+
+.card-container :hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .index-card img {
@@ -42,12 +46,13 @@
   width: 200px;
   object-fit: cover;
   margin: 3px;
+  border-radius: 3px;
 }
 
 .index-card h2 {
   font-size: 13px;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 .index-card p {
@@ -56,7 +61,7 @@
   opacity: .7;
   margin-bottom: 15px;
   margin-top: 8px;
-  color: white;
+  color: black;
 }
 
 .index-card .index-card-product-infos {
