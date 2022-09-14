@@ -22,27 +22,6 @@
   z-index: 1;
 }
 
-.content h1{
-  font-size: 80px;
-  color: white;
-  font-weight: 600;
-  transition: 0.5s;
-}
-.content a:hover{
-  -webkit-text-stroke: 1px $orange;
-  color: transparent;
-}
-.content a{
-  text-decoration: none;
-  display: inline-block;
-  color: $orange;
-  font-size: 24px;
-  border: 2px solid $orange;
-  padding: 14px 70px;
-  border-radius: 30px;
-  margin-top: 20px;
-}
-
 @media (min-aspect-ratio: 16/9){
   .back-video{
     width: 100%;

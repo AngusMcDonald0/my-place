@@ -1,4 +1,4 @@
-<div>
+<div data-controller="transactions">
   <%= render "propertynavbar", property: @property %>
 
   <!-- <div class="container mt-3">
@@ -10,7 +10,7 @@
   <%= render "key_statistics", property: @property %>
 
   <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-6 d-none" data-transactions-target="form">
       <%= render "transactions/form" %>
     </div>
   </div>
