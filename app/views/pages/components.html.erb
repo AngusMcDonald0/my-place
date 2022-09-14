@@ -1,3 +1,12 @@
+  <div class="graph-container bg-white">
+    <br>
+    <% data_hash = {} %>
+    <% Property.all.each do |property| %>
+      <% data_hash[property.address] = property.total_profit %>
+    <% end %>
+    <%= pie_chart data_hash, legend: "right", colors: ["#f6bd60", "#f7ede2", "#f5cac3", "#84a59d", "#f28482"] %>
+    <br>
+  </div>
 <div class="card-container">
   <div class="index-card">
     <img src="https://i2.au.reastatic.net/1000x750-format=webp/11cec2902a7318a9a7ece6decc7058aea782bc3b2fd99dfcbcd13f0e6458bc67/image.jpg" />
