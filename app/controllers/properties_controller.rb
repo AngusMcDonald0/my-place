@@ -6,7 +6,9 @@ class PropertiesController < ApplicationController
   def show
     @property = Property.find(params[:id])
     @transaction = Transaction.new
-    @transactions = Transaction.where(property: @property)
+    @transactions = @property.transactions
+    @past_transactions = @property.transactions.past
+    @future_transactions = @property.transactions.future
   end
 
   def new
