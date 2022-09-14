@@ -7,11 +7,11 @@
           <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
           <p>All Properties</p>
         <% end %>
-        <h2 class="dash-property">Dashboard: <%= @property.address %></h2>
+        <h2 class="dash-property text-start">Dashboard: <%= @property.address %></h2>
       </div>
 
       <div class="col-lg-6 d-flex align-items-center justify-content-end">
-        <div class="btn btn-primary" id="add-transaction-button">+Add Transaction</div>
+        <div class="btn btn-primary" id="add-transaction-button" data-action="click->transactions#displayForm">+Add Transaction</div>
       </div>
     </div>
 
