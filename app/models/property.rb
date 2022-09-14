@@ -9,6 +9,7 @@ class Property < ApplicationRecord
     end.sum
   end
 
+
   # AVERAGE_PRICES = {
   #   "St Kilda": {
   #     "property_type": {

@@ -3,6 +3,7 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @property = Property.find(params[:property_id])
     @transaction.property = @property
+    raise
     if @transaction.save
       redirect_to property_path(@property), alert: "Transaction Created!"
     else
