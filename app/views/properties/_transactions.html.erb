@@ -109,7 +109,7 @@
             </div>
           </div>
           <% @transactions.each do |transaction| %>
-            <% if transaction.date.month == Time.now.month %>
+            <% if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year %>
               <div class="d-flex flex-row list <%= transaction.cash_flow_type == "Revenue" ? "light-green" : "light-red" %>">
                 <div class="leftcol">
                   <%= transaction.date.strftime("%Y %b %d ") %>
