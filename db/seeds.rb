@@ -22,7 +22,7 @@ property1 = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/cfe4360bc60f599fe538163f1cf591a120a8078dd6f1359b69b1f3177ab540fb/image.jpg")
+file = URI.open("https://www.thepinnaclelist.com/wp-content/uploads/2020/12/001-SHINE-Luxury-Apartment-Interior-Design-Dnipro-Ukraine-Svoya-Studio.jpeg")
 property1.photo.attach(io: file, filename: property1.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/ac86f8eb38800c1868abb13cbddc0a19a2164c3f1470feb918f5be9fd7976a07/image.jpg")
@@ -49,11 +49,10 @@ property2 = Property.create!(
   user: angus,
   # price: 780000,
   property_type: "house"
-
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/800x600-format=webp/70a422b2f7b4ffd9f10535390c308995585fada98962463c931dc14ed0cd46fd/image.jpg")
+file = URI.open("https://www.realestate.com.au/blog/images/550x330-fit,progressive/2016/05/HOUSE-1-550.jpg")
 property2.photo.attach(io: file, filename: property2.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/d8ae76635fe5e9f7785c4fa858c92171e78d6b441a7590a78576d9b50296edcf/image.jpg")
@@ -82,7 +81,7 @@ property3 = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://www.traveller.com.au/content/dam/images/g/j/c/f/8/s/image.related.articleLeadwide.620x349.gjcccz.png/1441093323440.jpg")
+file = URI.open("https://i.pinimg.com/originals/24/e8/f0/24e8f08ba83e34213572acbdb1061bf0.jpg")
 property3.photo.attach(io: file, filename: property3.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/1daa0a8bb756433bf553ed0d7f9c67c341696023195bc695ab3ba852efaae157/image.jpg")
@@ -93,7 +92,7 @@ property3.photo.attach(io: file, filename: property3.address)
 
 puts "#{property3.address} seeded"
 
-# SEED CREATE
+
 # properties = Property.create!(
 #   address: "34 / 180 Stirling Street",
 #   # description: "Luxury 1x1x1 in Zenith Apartment.",
