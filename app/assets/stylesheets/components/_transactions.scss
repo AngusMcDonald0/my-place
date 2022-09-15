@@ -1,12 +1,12 @@
 .section {
   min-height: 600px;
   border-radius: 5px;
-  background-color: $grey;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+  margin-bottom: 20px;
 }
 
 .transaction-container {
-  margin: 10px;
 
   .details {
     width: 1000px;
@@ -14,22 +14,29 @@
 
   .list {
     width: 1000px;
-    padding: 2px;
-    background-color: rgb(117, 137, 168);
+    padding: 3px;
     border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   .leftcol {
     width: 150px;
   }
 
-  .grid-margin {
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
-
   .pos {
     width: 69px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .light-green {
+    background-color: rgba(43, 179, 192, 0.1);
+  }
+
+  .light-red {
+    background-color: rgba(225, 97, 35, 0.1);
   }
 
   .green {
@@ -38,5 +45,20 @@
 
   .red {
     color: #e16123;
+  }
+}
+// #######################
+
+.label {
+  background-color: #393939;
+  font-weight: 700;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  padding-bottom: 20px;
+
+  .head {
+    font-size: 24px;
   }
 }
