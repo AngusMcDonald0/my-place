@@ -11,15 +11,19 @@
       <%= bar_chart [["revenue", revenue],["expense", expense]],colors: ["#84a59d","#f5cac3", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: @property.address %>      <br>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-6 d-none" data-transactions-target="form">
-        <%= render "transactions/form" %>
-      </div>
+
+  <div class="row justify-content-center">
+    <div class="col-6" data-transactions-target="form">
+      <%= render "transactions/form" %>
+
+    </div>
+    
     </div>
 
     <div class="section">
       <%= render "transactions" %>
     </div>
+
   </div>
 
 </div>
