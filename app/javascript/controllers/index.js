@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import TransactionsController from "./transactions_controller"
 application.register("transactions", TransactionsController)
+
+import ToggleClassController from "./toggle_class_controller"
+application.register("toggle-class", ToggleClassController)
