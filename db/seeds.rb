@@ -151,3 +151,451 @@ properties.photo.attach(io: file, filename: properties.address)
 # properties.photo.attach(io: file, filename: properties.address)
 
 puts "#{properties.address} seeded"
+
+
+transaction1 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,8,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "August 2020 Monthly Rental Income",
+)
+
+transaction2 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,9,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "September 2020 Monthly Rental Income",
+)
+transaction3 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,10,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "October 2020 Monthly Rental Income",
+)
+transaction4 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,11,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "November 2020 Monthly Rental Income"
+)
+transaction5 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,12,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "December 2020 Monthly Rental Income",
+)
+transaction6 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,1,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "January 2021 Monthly Rental Income",
+)
+transaction7 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,2,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "February 2021 Monthly Rental Income"
+)
+transaction8 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,8,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "August 2021 Monthly Rental Income"
+)
+transaction9 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,9,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "September 2021 Monthly Rental Income"
+)
+transaction10 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,10,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "October 2021 Monthly Rental Income"
+)
+transaction11 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,11,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "November 2021 Monthly Rental Income"
+)
+transaction12 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,12,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "December 2021 Monthly Rental Income"
+)
+transaction13 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,1,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "January 2022 Monthly Rental Income"
+)
+transaction14 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,2,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "February 2022 Monthly Rental Income"
+)
+transaction15 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,9,13),
+  category: "Rental Income",
+  amount: 2000,
+  description: "September 2022 Monthly Rental Income",
+)
+transaction16 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Expenses"
+  date: DDateTime.new(2022,9,13),
+  category: "Maintenance",
+  amount: 500,
+  description: "September 2022 Payed Plumber for Fixing the Toilet"
+)
+transaction17 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Expenses"
+  date: DateTime.new(2022,9,13),
+  category: "Mortgage",
+  amount: 1550,
+  description: "September 2022 Mortgage Payment",
+)
+transaction18 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2022,9,13),
+  category: "Maintenance",
+  amount: 75,
+  description: "September 2022 Lightbulb Change",
+)
+
+transaction19 = Transaction.create!(
+  property: property1,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2022,9,13),
+  category: "Maintenance",
+  amount: 200,
+  description: "September 2022 Annual Smoke Alarm Change",
+)
+
+transaction21 = Transaction.create!(
+  property: property2
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,8,7),
+  category: "Rental Income",
+  amount: 2300,
+  description: "August 2020 Monthly Rental Income",
+)
+
+transaction22 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,9,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "September 2020 Monthly Rental Income",
+)
+transaction23 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,10,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "October 2020 Monthly Rental Income",
+)
+transaction24 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,11,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "November 2020 Monthly Rental Income"
+)
+transaction25 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,12,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "December 2020 Monthly Rental Income",
+)
+transaction26 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,1,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "January 2021 Monthly Rental Income",
+)
+transaction27 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,2,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "February 2021 Monthly Rental Income"
+)
+transaction28 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,8,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "August 2021 Monthly Rental Income"
+)
+transaction29 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,9,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "September 2021 Monthly Rental Income"
+)
+transaction30 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,10,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "October 2021 Monthly Rental Income"
+)
+transaction31 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,11,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "November 2021 Monthly Rental Income"
+)
+transaction32 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,12,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "December 2021 Monthly Rental Income"
+)
+transaction33 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,1,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "January 2022 Monthly Rental Income"
+)
+transaction34 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,2,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "February 2022 Monthly Rental Income"
+)
+transaction35 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,9,7),
+  category: "Rental Income",
+  amount: 2400,
+  description: "September 2022 Monthly Rental Income",
+)
+transaction36 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Expenses"
+  date: DateTime.new(2020,8,17),
+  category: "Maintenance",
+  amount: 300,
+  description: "August 2020 Payed Plumber for Fixing the Toilet"
+)
+transaction37 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2020,12,29)
+  category: "Maintenance",
+  amount: 75,
+  description: "December 2020 Lightbulb Change",
+)
+transaction38 = Transaction.create!(
+  property: property2,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2020,9,13)
+  category: "Maintenance",
+  amount: 200,
+  description: "September 2022 Annual Smoke Alarm Change",
+)
+
+transaction41 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,8,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "August 2020 Monthly Rental Income",
+)
+
+transaction42 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,9,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "September 2020 Monthly Rental Income",
+)
+transaction43 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,10,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "October 2020 Monthly Rental Income",
+)
+transaction44 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,11,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "November 2020 Monthly Rental Income"
+)
+transaction45 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2020,12,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "December 2020 Monthly Rental Income",
+)
+transaction46 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,1,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "January 2021 Monthly Rental Income",
+)
+transaction47 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,2,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "February 2021 Monthly Rental Income"
+)
+transaction48 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,8,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "August 2021 Monthly Rental Income"
+)
+transaction49 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,9,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "September 2021 Monthly Rental Income"
+)
+transaction50 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,10,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "October 2021 Monthly Rental Income"
+)
+transaction51 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,11,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "November 2021 Monthly Rental Income"
+)
+transaction52 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2021,12,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "December 2021 Monthly Rental Income"
+)
+transaction53 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,1,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "January 2022 Monthly Rental Income"
+)
+transaction54 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,2,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "February 2022 Monthly Rental Income"
+)
+transaction55 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Revenue",
+  date: DateTime.new(2022,9,9),
+  category: "Rental Income",
+  amount: 2250,
+  description: "September 2022 Monthly Rental Income",
+)
+transaction56 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2020,8,19),
+  category: "Maintenance",
+  amount: 320,
+  description: "August 2020 Payed Plumber for Fixing the Toilet"
+)
+transaction57 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2020,12,22),
+  category: "Maintenance",
+  amount: 65,
+  description: "December 2020 Lightbulb Change",
+)
+transaction58 = Transaction.create!(
+  property: property3,
+  cashflow_type: "Expenses",
+  date: DateTime.new(2022,9,13),
+  category: "Maintenance",
+  amount: 200,
+  description: "September 2022 Annual Smoke Alarm Change",
+)
