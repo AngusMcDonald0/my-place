@@ -4,6 +4,7 @@ class PropertiesController < ApplicationController
   end
 
   def show
+    @properties = Property.all
     @property = Property.find(params[:id])
     @transaction = Transaction.new
     @transactions = @property.transactions.sort_by(&:date)
