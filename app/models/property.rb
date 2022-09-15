@@ -8,26 +8,4 @@ class Property < ApplicationRecord
       transaction.cash_flow_type == "Revenue" ? transaction.amount : - transaction.amount
     end.sum
   end
-
-
-  # AVERAGE_PRICES = {
-  #   "St Kilda": {
-  #     "property_type": {
-  #       "house": {
-  #         "1-bedroom":
-  #         "2-bedroom":
-  #         "3-bedroom":
-  #         "4-bedroom":
-  #         "5-bedroom":
-  #       },
-  #       "unit": {
-  #         "1-bedroom":
-  #         "2-bedroom":
-  #         "3-bedroom":
-  #         "4-bedroom":
-  #         "5-bedroom":
-  #       }
-  #     }
-  #   }
-  # }
 end

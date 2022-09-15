@@ -1,24 +1,8 @@
+
+  //graph about @property revenue vs expense ----COMPLETED
+  //graph that shows all the different category of expenses
+  //graphc that shows the total expense of @property compared to the average expenses of all properties
 <div class="container">
-  <div class="graph-container bg-white rounded">
-    <br>
-    <% data_hash = {} %>
-    <% Property.all.each do |property| %>
-      <% data_hash[property.address] = property.total_profit %>
-    <% end %>
-    <%= column_chart data_hash, colors: ["#f6bd60", "#f7ede2", "#f5cac3", "#84a59d", "#f28482"] %>
-    <br>
-  </div>
-  <div class="card-container">
-    <% @properties.each do |property| %>
-    <div class="index-card">
-      <img src="https://i2.au.reastatic.net/1000x750-format=webp/11cec2902a7318a9a7ece6decc7058aea782bc3b2fd99dfcbcd13f0e6458bc67/image.jpg" />
-      <div class="index-card-product-infos">
-        <h2><%= property.address %></h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
-      </div>
-      <div class="index-card-product-states">
-        <i class="fa-thin fa-bed"></i>
-      </div>
-    <%end%>
-  </div>
+  <% @property = Property.second %>
+  <%= column_chart @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount), colors: ["#84a59d","#f5cac3", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: @property.address %>
 </div>
