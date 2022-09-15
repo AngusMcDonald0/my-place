@@ -7,11 +7,14 @@
           <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
           <p>All Properties</p>
         <% end %>
-        <h2 class="dash-property text-start">Dashboard: <%= @property.address %></h2>
+        <h2 class="dash-property text-start"><%= @property.address %></h2>
       </div>
 
       <div class="col-lg-6 d-flex align-items-center justify-content-end">
-        <div class="btn btn-primary" id="add-transaction-button" data-action="click->transactions#displayForm">+Add Transaction</div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="add-transaction-button">
+          +Add Transaction
+        </button>
       </div>
     </div>
 

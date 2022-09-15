@@ -7,7 +7,7 @@ class PropertiesController < ApplicationController
     @properties = Property.all
     @property = Property.find(params[:id])
     @transaction = Transaction.new
-    @transactions = @property.transactions
+    @transactions = @property.transactions.sort_by(&:date)
     @past_transactions = @property.transactions.past
     @future_transactions = @property.transactions.future
   end
