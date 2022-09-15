@@ -1,8 +1,22 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+@font-face {
+  font-family: 'Oscine Trial';
+  src: url('Oscine_Trial_Bd');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oscine Trial';
+  src: url('Oscine_Trial_Rg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Define fonts for body and headers
-$body-font: "Roboto", "Helvetica", "sans-serif";
+$body-font: "Oscine Trial";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
