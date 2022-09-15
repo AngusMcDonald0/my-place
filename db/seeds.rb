@@ -1,30 +1,5 @@
 Property.destroy_all && User.destroy_all if Rails.env.development?
 
-# Creating the users
-# james = User.create!(
-#   email: "james@dickys.com",
-#   password: "abcdef",
-#   password_confirmation: "abcdef"
-# )
-
-
-# chris = User.create!(
-  #   email: "chris@dickys.com",
-  #   password: "abcdef",
-  #   password_confirmation: "abcdef"
-  # )
-
-  # tony = User.create!(
-    #   email: "tony@dickys.com",
-    #   password: "abcdef",
-#   password_confirmation: "abcdef"
-
-# )
-
-# users = [james, angus, chris, tony]
-# categories = ["Apartment", "Villa", "Acreage", "Block of Units", "House", "Townhouse", "Land", "Rural", "Retirement Living"]
-# state = ["Victoria", "New South Wales", "Western Australia", "South Australia", "Tasmania"]
-
 angus = User.create!(
   email: "angus@test.com",
   password: "123456",
@@ -34,7 +9,6 @@ angus = User.create!(
 # SEED CREATE
 properties = Property.create!(
   address: "2503 / 442-450 Elizabeth Street",
-  # description: "Shimmering tower views and luxe styling.",
   bedrooms: 1,
   # bathrooms: 1,
   # garage: "1-car"
@@ -44,7 +18,6 @@ properties = Property.create!(
   # state: "Victoria",
   # postcode: 3000
   user: angus,
-  # price: 360000,
   property_type: "unit"
 )
 
@@ -95,7 +68,6 @@ puts "#{properties.address} seeded"
 # SEED CREATE
 properties = Property.create!(
   address: "1703 / 161 Clarence Street",
-  # description: "One Bedroom + Study Apartment with City Views in Arc by Crown.",
   bedrooms: 1,
   # bathrooms: 1,
   # garage: "N/A",
@@ -110,7 +82,7 @@ properties = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/a20ba31fa4ebc2b26922e13511f0d08e5388cd69f8300c5f3f23f2b58a92e18e/image.jpg")
+file = URI.open("https://www.traveller.com.au/content/dam/images/g/j/c/f/8/s/image.related.articleLeadwide.620x349.gjcccz.png/1441093323440.jpg")
 properties.photo.attach(io: file, filename: properties.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/1daa0a8bb756433bf553ed0d7f9c67c341696023195bc695ab3ba852efaae157/image.jpg")
@@ -139,7 +111,7 @@ properties = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/94a004f1b4918ca8d185b47e365c1f36be861b19653fa0bd6991d5329ce6bfba/image.jpg")
+file = URI.open("https://thenewdaily.com.au/wp-content/uploads/2018/05/1526025572-WORD9699_Crown-Sydney_IN11_Premium-Apartment_Living.jpg")
 properties.photo.attach(io: file, filename: properties.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/34c210f2444e9630e975a05f82bd65c49d456e84a74571415a1a67e395255782/image.jpg")
@@ -169,7 +141,7 @@ properties = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/800x600-format=webp/be4e5c99a84c5a38482c04bfdec689769522f68dd575dc1505b76d9ed2f9835b/image.jpg")
+file = URI.open("http://www.realestate2buy.com/home/domains/www.realestate2buy.com/public_html/wp-content/uploads//2016/11/Apartment-Aus-770x386.jpg")
 properties.photo.attach(io: file, filename: properties.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/1840x1040-resize,r=33,g=40,b=46/6de3cf593a6afa43c4ef9cc06173109e75b213ce528b65f9445ea8e74ea2aace/image.jpg")
@@ -179,32 +151,3 @@ properties.photo.attach(io: file, filename: properties.address)
 # properties.photo.attach(io: file, filename: properties.address)
 
 puts "#{properties.address} seeded"
-
-## FAKER CODE
-# equipment = Equipment.create!(
-#   name: sport.sample,
-#   description: Faker::Quote.famous_last_words,
-#   category: categories.sample,
-#   location: locations.sample,
-#   user: users.sample
-# )
-
-# file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
-
-# equipment.photo.attach(io: file, filename: equipment.name)
-# puts "#{equipment.name} seeded"
-
-# 5.times do |index|
-#   equipment = Equipment.create!(
-#     name: sport.sample,
-#     description: Faker::Quote.famous_last_words,
-#     category: categories.sample,
-#     location: locations.sample,
-#     user: users.sample,
-#     price: rand(5..50)
-#   )
-#   file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
-
-#   equipment.photo.attach(io: file, filename: equipment.name)
-#   puts "#{equipment.name} seeded"
-# end

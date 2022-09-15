@@ -1,3 +1,7 @@
+<% expense =@property.transactions.expenses.sum(:amount)%>
+<% revenue = @property.transactions.revenues.sum(:amount)%>
+<% total = revenue - expense %>
+
 <div class="row overviewGutter">
   <div class="col-md-4">
     <div class="panel">
@@ -15,8 +19,8 @@
         <div class="statsOverview--body">
           <i class="fa-solid fa-money-bill-trend-up"></i>
           <p class="statsOverview--rangeIn">Monthly</p>
-          <h3 class="statsOverview--label">Net Income</h3>
-          <p class="statsOverview--dollarIn">$350</p>
+          <h3 class="statsOverview--label">Revenue</h3>
+          <p class="statsOverview--dollarIn">$<%= revenue %></p>
         </div>
       </div>
 
@@ -39,8 +43,8 @@
         <div class="statsOverview--body">
           <i class="fa-solid fa-money-bill-trend-up" id="moneyflip"></i>
           <p class="statsOverview--rangeOut">Monthly</p>
-          <h3 class="statsOverview--label">Net Loss</h3>
-          <p class="statsOverview--dollarOut">$100</p>
+          <h3 class="statsOverview--label">Expenses</h3>
+          <p class="statsOverview--dollarOut">$<%=expense%></p>
         </div>
       </div>
     </div>
@@ -61,8 +65,8 @@
         <div class="statsOverview--body">
           <i class="fa-solid fa-money-bill-transfer"></i>
           <p class="statsOverview--rangeTotal">Monthly</p>
-          <h3 class="statsOverview--label">Gross</h3>
-          <p class="statsOverview--dollarTotal">$250</p>
+          <h3 class="statsOverview--label">Total</h3>
+          <p class="statsOverview--dollarTotal">$<%=total %></p>
         </div>
       </div>
 
