@@ -2,6 +2,7 @@
 <div data-controller="transactions">
   <%= render "propertynavbar", property: @property %>
   <div class="container">
+
     <!-- <div class="container mt-3">
     <h1>Show Page</h1><br>
     <%= @property.address %><br>
@@ -13,8 +14,7 @@
     <br>
       <%revenue = @property.transactions.revenues.sum(:amount)%>
       <%expense = @property.transactions.expenses.sum(:amount)%>
-      <%= bar_chart [["revenue", revenue],["expense", expense]],colors: ["#f5cac3", "#f7ede2", "#f5cac3", "#84a59d", "#f28482"], donut:true, title: @property.address %>
-      <br>
+      <%= bar_chart [["revenue", revenue],["expense", expense]],colors: ["#84a59d","#f5cac3", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: @property.address %>      <br>
     </div>
 
 

@@ -1,30 +1,5 @@
 Property.destroy_all && User.destroy_all if Rails.env.development?
 
-# Creating the users
-# james = User.create!(
-#   email: "james@dickys.com",
-#   password: "abcdef",
-#   password_confirmation: "abcdef"
-# )
-
-
-# chris = User.create!(
-  #   email: "chris@dickys.com",
-  #   password: "abcdef",
-  #   password_confirmation: "abcdef"
-  # )
-
-  # tony = User.create!(
-    #   email: "tony@dickys.com",
-    #   password: "abcdef",
-#   password_confirmation: "abcdef"
-
-# )
-
-# users = [james, angus, chris, tony]
-# categories = ["Apartment", "Villa", "Acreage", "Block of Units", "House", "Townhouse", "Land", "Rural", "Retirement Living"]
-# state = ["Victoria", "New South Wales", "Western Australia", "South Australia", "Tasmania"]
-
 angus = User.create!(
   email: "angus@test.com",
   password: "123456",
@@ -34,7 +9,6 @@ angus = User.create!(
 # SEED CREATE
 properties = Property.create!(
   address: "2503 / 442-450 Elizabeth Street",
-  # description: "Shimmering tower views and luxe styling.",
   bedrooms: 1,
   # bathrooms: 1,
   # garage: "1-car"
@@ -44,7 +18,6 @@ properties = Property.create!(
   # state: "Victoria",
   # postcode: 3000
   user: angus,
-  # price: 360000,
   property_type: "unit"
 )
 
@@ -95,7 +68,6 @@ puts "#{properties.address} seeded"
 # SEED CREATE
 properties = Property.create!(
   address: "1703 / 161 Clarence Street",
-  # description: "One Bedroom + Study Apartment with City Views in Arc by Crown.",
   bedrooms: 1,
   # bathrooms: 1,
   # garage: "N/A",
@@ -179,32 +151,3 @@ properties.photo.attach(io: file, filename: properties.address)
 # properties.photo.attach(io: file, filename: properties.address)
 
 puts "#{properties.address} seeded"
-
-## FAKER CODE
-# equipment = Equipment.create!(
-#   name: sport.sample,
-#   description: Faker::Quote.famous_last_words,
-#   category: categories.sample,
-#   location: locations.sample,
-#   user: users.sample
-# )
-
-# file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
-
-# equipment.photo.attach(io: file, filename: equipment.name)
-# puts "#{equipment.name} seeded"
-
-# 5.times do |index|
-#   equipment = Equipment.create!(
-#     name: sport.sample,
-#     description: Faker::Quote.famous_last_words,
-#     category: categories.sample,
-#     location: locations.sample,
-#     user: users.sample,
-#     price: rand(5..50)
-#   )
-#   file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
-
-#   equipment.photo.attach(io: file, filename: equipment.name)
-#   puts "#{equipment.name} seeded"
-# end
