@@ -5,7 +5,7 @@ class Property < ApplicationRecord
 
   def total_profit
     transactions.map do |transaction|
-      transaction.cash_flow_type == "Revenue" ? transaction.amount : - transaction.amount
+      transaction.cash_flow_type == "Revenue" ? transaction.amount : -transaction.amount
     end.sum
   end
 
