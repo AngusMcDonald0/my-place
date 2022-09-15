@@ -42,7 +42,7 @@
           </div>
           <% @transactions.each do |transaction| %>
             <% if transaction.date > "2022-06-30".to_date %>
-              <div class="d-flex flex-row details grid-margin">
+              <div class="d-flex flex-row list grid-margin">
                 <div class="leftcol">
                   <%= transaction.date.strftime("%Y %b %d ") %>
                 </div>
