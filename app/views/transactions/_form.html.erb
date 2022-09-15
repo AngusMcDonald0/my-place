@@ -1,9 +1,25 @@
-<%= simple_form_for [@property, @transaction] do |t| %>
-    <%= t.input :cash_flow_type, :collection => %w[Revenue Expense] %>
-    <%= t.input :date %>
-    <%= t.input :frequency, collection: [ ["weekly", 7], ["monthly", 30], ["quarterly", 120] ] %>
-    <%= t.input :category, :collection => %w[Maintenance Mortgage TO-DO] %>
-    <%= t.input :amount %>
-    <%= t.input :description %>
-    <%= t.submit %>
-  <% end %>
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add a new transaction</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for [@property, @transaction] do |t| %>
+            <%= t.input :cash_flow_type, :collection => %w[Revenue Expense] %>
+            <%= t.input :date %>
+            <%= t.input :frequency, collection: [ ["weekly", 7], ["monthly", 30], ["quarterly", 120] ] %>
+            <%= t.input :category, :collection => %w[Maintenance Mortgage TO-DO] %>
+            <%= t.input :amount %>
+            <%= t.input :description %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <%= t.submit class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

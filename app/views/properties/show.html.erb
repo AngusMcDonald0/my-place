@@ -9,18 +9,17 @@
   it is a <%= @property.property_type %>-->
 
   <%= render "key_statistics", property: @property %>
+
   <div class="container">
-   <br>
+    <br>
     <%revenue = @property.transactions.revenues.sum(:amount)%>
     <%expense = @property.transactions.expenses.sum(:amount)%>
     <%= bar_chart [["revenue", revenue],["expense", expense]],colors: ["#f5cac3", "#f7ede2", "#f5cac3", "#84a59d", "#f28482"], donut:true, title: @property.address %>
     <br>
   </div>
 
-
-  </div>
   <div class="row justify-content-center">
-    <div class="col-6 d-none" data-transactions-target="form">
+    <div class="col-6" data-transactions-target="form">
       <%= render "transactions/form" %>
     </div>
   </div>
@@ -28,6 +27,4 @@
   <div class="section bg-gradient p-3 mb-3 mt-3">
     <%= render "transactions" %>
   </div>
-  </div>
-
 </div>
