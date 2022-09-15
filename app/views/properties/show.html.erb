@@ -9,6 +9,7 @@
     <%= @property.bedrooms %> bedrooms<br>
     it is a <%= @property.property_type %>-->
 
+
     <%= render "key_statistics", property: @property %>
     <div class="container">
     <br>
@@ -18,6 +19,10 @@
     </div>
 
 
+  <div class="row justify-content-center">
+    <div class="col-6" data-transactions-target="form">
+      <%= render "transactions/form" %>
+
     </div>
     <div class="row justify-content-center">
       <div class="col-6 d-none" data-transactions-target="form">
@@ -25,10 +30,8 @@
       </div>
     </div>
 
-    <div class="container section bg-gradient p-3 mb-3 mt-3">
-      <%= render "transactions" %>
-    </div>
-    </div>
+  <div class="section bg-gradient p-3 mb-3 mt-3">
+    <%= render "transactions" %>
   </div>
 
 </div>
