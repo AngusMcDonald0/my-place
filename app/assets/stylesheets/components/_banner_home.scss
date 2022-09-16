@@ -21,11 +21,21 @@
 .banner-container {
   z-index: 1;
   color: white;
+  position: absolute;
+  top: 400px;
+  left: 400px;
 }
 
 .content {
   text-align: center;
-  // z-index: 1;
+}
+
+.home-button {
+
+}
+
+.home-text {
+
 }
 
 @media (min-aspect-ratio: 16/9) {

@@ -1,7 +1,11 @@
 <div class="hero">
   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
   <div class="banner-container">
-    <h1>All-in-One Property Data Management</h1>
-    <%= link_to "Get Started", properties_path, class:"btn btn-primary text-white" %>
+    <div class="home-text">
+      <h1>All-in-One Property Data Management</h1>
+    </div>
+    <div class="home-button">
+      <%= link_to "Get Started", properties_path, class:"btn btn-primary text-white" %>
+    </div>
   </div>
 </div>
