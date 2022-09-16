@@ -1,43 +1,27 @@
-
 <div data-controller="transactions">
   <%= render "propertynavbar", property: @property %>
   <div class="container">
 
-    <%= render "key_statistics", property: @property %>
-    <div style="width: 100%; height: 600px;"
-      data-controller="map"
-      data-map-marker-value="<%= @marker.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-    <div class="container">
-    <%average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h } %>
-    <%single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)%>
-
-    <%= column_chart [
-  {name: @property.address, data: single},
-  {name: "Your Average", data: average}
-], title: "Comparison", colors: ["#84a59d","#219ebc"] %>
-    <br>
-    <%= pie_chart single,colors: ["#eaac8b","#e56b6f", "#b56576", "#6d597a", "#355070"], donut:false, title: "#{@property.address} (Detailed Expenses)" %><br>
-    <br>
-      <%revenue = @property.transactions.revenues.sum(:amount)%>
-      <%expense = @property.transactions.expenses.sum(:amount)%>
-      <%= bar_chart [["revenue",  revenue],["expense", expense]],colors: ["#84a59d","#e56b6f", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: "#{@property.address} (Total Revenue & Expense)" %><br>
-    </div>
-
-
-  <div class="row justify-content-center">
     <div class="col-6" data-transactions-target="form">
       <%= render "transactions/form" %>
-
     </div>
 
-    </div>
+    <%= render "key_statistics", property: @property %>
 
-    <div class="section">
-      <%= render "transactions" %>
-    </div>
+    <div class="transaction-container">
+      <div class="tab-content">
 
+        <div class="tab-pane container active" id="transactions">
+          <div class="section">
+            <%= render "transactions" %>
+          </div>
+        </div>
+
+        <div class="tab-pane container fade" id="graphs">
+          <%= render "graphs" %>
+        </div>
+
+      </div>
+    </div>
   </div>
-
 </div>
