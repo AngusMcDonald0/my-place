@@ -4,6 +4,11 @@
   <div class="container">
 
     <%= render "key_statistics", property: @property %>
+    <div style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-marker-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
     <div class="container">
     <%average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h } %>
     <%single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)%>

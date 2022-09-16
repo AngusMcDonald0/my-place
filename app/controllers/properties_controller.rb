@@ -10,6 +10,7 @@ class PropertiesController < ApplicationController
     @transactions = @property.transactions.sort_by(&:date)
     @past_transactions = @property.transactions.past
     @future_transactions = @property.transactions.future
+    @marker = { lat: @property.latitude, lng: @property.longitude }
   end
 
   def new

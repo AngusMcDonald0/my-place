@@ -167,6 +167,7 @@ description = ["Electrician", "Major Repairs", "Mortgage Repayment", "Rates", "W
   date: DateTime.new(2022, 9, 1),
   amount: 300,
   description: "Electrical Work"
+
 )
 
 transaction2 = Transaction.create!(
