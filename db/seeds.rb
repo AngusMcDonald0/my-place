@@ -159,7 +159,7 @@ puts "#{property3.address} seeded"
 transaction1 = Transaction.create!(
   property: property1,
   cash_flow_type: "Revenue",
-  date: DateTime.new(2020,8,13),
+  date: DateTime.new(2022,7,13),
   category: "Rental Income",
   amount: 2000,
   description: "July 2022 Monthly Rental Income",
