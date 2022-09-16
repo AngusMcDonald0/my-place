@@ -12,7 +12,7 @@
           </p>
           <p class="statsOverview--headerInPercentage">
             <i class="fa fa-level-up-alt"></i>
-            <span>23%</span>
+            <%# <span>23%</span> %>
           </p>
         </div>
 
@@ -20,7 +20,7 @@
           <i class="fa-solid fa-money-bill-trend-up"></i>
           <p class="statsOverview--rangeIn">Monthly</p>
           <h3 class="statsOverview--label">Revenue</h3>
-          <p class="statsOverview--dollarIn">$<%= revenue %></p>
+          <p class="statsOverview--dollarIn">$<%= revenue.round() %></p>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
           </p>
           <p class="statsOverview--headerOutPercentage">
             <i class="fa fa-level-down-alt"></i>
-            <span>10%</span>
+            <%# <span>10%</span> %>
           </p>
         </div>
 
@@ -44,7 +44,7 @@
           <i class="fa-solid fa-money-bill-trend-up" id="moneyflip"></i>
           <p class="statsOverview--rangeOut">Monthly</p>
           <h3 class="statsOverview--label">Expenses</h3>
-          <p class="statsOverview--dollarOut">$<%=expense%></p>
+          <p class="statsOverview--dollarOut">$<%=expense.round()%></p>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
           </p>
           <p class="statsOverview--headerTotalPercentage">
             <i class="fa-solid fa-hand-holding-dollar"></i>
-            <span>23%</span>
+            <%# <span>23%</span> %>
           </p>
         </div>
 
@@ -66,7 +66,7 @@
           <i class="fa-solid fa-money-bill-transfer"></i>
           <p class="statsOverview--rangeTotal">Monthly</p>
           <h3 class="statsOverview--label">Total</h3>
-          <p class="statsOverview--dollarTotal">$<%=total %></p>
+          <p class="statsOverview--dollarTotal">$<%=total.round()%></p>
         </div>
       </div>
 

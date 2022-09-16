@@ -7,8 +7,11 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import TransactionsController from "./transactions_controller"
-application.register("transactions", TransactionsController)
+import MapController from "./map_controller"
+application.register("map", MapController)
 
 import ToggleClassController from "./toggle_class_controller"
 application.register("toggle-class", ToggleClassController)
+
+import TransactionsController from "./transactions_controller"
+application.register("transactions", TransactionsController)

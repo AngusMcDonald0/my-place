@@ -10,6 +10,11 @@ class PropertiesController < ApplicationController
     @transactions = @property.transactions.sort_by(&:date)
     @past_transactions = @property.transactions.past
     @future_transactions = @property.transactions.future
+    @marker = { lat: @property.latitude, lng: @property.longitude }
+    @average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h }
+    @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
+    @revenue = @property.transactions.revenues.sum(:amount)
+    @expense = @property.transactions.expenses.sum(:amount)
   end
 
   def new
