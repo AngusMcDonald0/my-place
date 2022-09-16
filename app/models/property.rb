@@ -10,4 +10,6 @@ class Property < ApplicationRecord
       transaction.cash_flow_type == "Revenue" ? transaction.amount : -transaction.amount
     end.sum
   end
+
+  CATEGORIES = ["Unit", "House"]
 end

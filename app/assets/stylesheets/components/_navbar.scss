@@ -41,3 +41,11 @@
   color: #F39F1F;
   ;
 }
+
+.nav-item a {
+  font-size: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
