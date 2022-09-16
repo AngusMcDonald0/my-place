@@ -11,7 +11,7 @@
             <%= t.input :cash_flow_type, :collection => %w[Revenue Expense] %>
             <%= t.input :date %>
             <%# t.input :frequency, collection: [ ["weekly", 7], ["monthly", 30], ["quarterly", 120] ] %>
-            <%= t.input :category, :collection => %w[Maintenance Mortgage TO-DO] %>
+            <%= t.input :category, :collection => ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"] %>
             <%= t.input :amount %>
             <%= t.input :description %>
         </div>
@@ -23,4 +23,3 @@
       </div>
     </div>
   </div>
-
