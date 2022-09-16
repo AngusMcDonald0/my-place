@@ -5,19 +5,19 @@
 
     <%= render "key_statistics", property: @property %>
     <div class="container">
-    <%average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = v / @properties.count; h } %>
+    <%average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h } %>
     <%single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)%>
 
     <%= column_chart [
   {name: @property.address, data: single},
   {name: "Your Average", data: average}
-], title: "Comparison", colors: ["#e76f51","#219ebc"] %>
+], title: "Comparison", colors: ["#84a59d","#219ebc"] %>
     <br>
-    <%= pie_chart single,colors: ["#eaac8b","#e56b6f", "#b56576", "#6d597a", "#355070"], donut:true, title: "#{@property.address} (Detailed Expenses)" %><br>
+    <%= pie_chart single,colors: ["#eaac8b","#e56b6f", "#b56576", "#6d597a", "#355070"], donut:false, title: "#{@property.address} (Detailed Expenses)" %><br>
     <br>
       <%revenue = @property.transactions.revenues.sum(:amount)%>
       <%expense = @property.transactions.expenses.sum(:amount)%>
-      <%= bar_chart [["revenue",  revenue],["expense", expense]],colors: ["#84a59d","#f5cac3", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: "#{@property.address} (Total Revenue & Expense)" %><br>
+      <%= bar_chart [["revenue",  revenue],["expense", expense]],colors: ["#84a59d","#e56b6f", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: "#{@property.address} (Total Revenue & Expense)" %><br>
     </div>
 
 
@@ -26,7 +26,7 @@
       <%= render "transactions/form" %>
 
     </div>
-    
+
     </div>
 
     <div class="section">
