@@ -1,10 +1,14 @@
 Property.destroy_all && User.destroy_all if Rails.env.development?
+require "uri"
 
 angus = User.create!(
   email: "angus@test.com",
   password: "123456",
-  password_confirmation: "123456"
+  password_confirmation: "123456",
 )
+
+my_photo = URI.open("https://avatars.githubusercontent.com/u/108924749?v=4")
+angus.avatar.attach(io: my_photo, filename: "angus")
 
 # SEED CREATE
 property1 = Property.create!(
@@ -505,7 +509,7 @@ transaction46 = Transaction.create!(
 transaction47 = Transaction.create!(
   property: property3,
   cash_flow_type: "Revenue",
-  date: DateTime.new(2021,2,29),
+  date: DateTime.new(2021,2,28),
   category: "Rental Income",
   amount: 2250,
   description: "February 2021 Monthly Rental Income"
