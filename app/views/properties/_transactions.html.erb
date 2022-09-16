@@ -20,39 +20,39 @@
 
 
     <div class="tab-pane container active" id="last">
-       <div class="row justify-content-center">
-          <div class="d-flex flex-row details">
-            <div class="leftcol ml-3">
-              <h5>Date</h5>
-            </div>
-            <div class="w-75 text-center">
-              <h5>Description</h5>
-            </div>
-            <div class="w-auto">
-              <h5>Amount</h5>
-            </div>
+      <div class="row justify-content-center">
+        <div class="d-flex flex-row details">
+          <div class="leftcol ml-3">
+            <h5>Date</h5>
           </div>
-          <% @transactions.each do |transaction| %>
-            <% if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date %>
-              <div class="d-flex flex-row list <%= transaction.cash_flow_type == "Revenue" ? "light-green" : "light-red" %>">
-                <div class="leftcol">
-                  <%= transaction.date.strftime("%Y %b %d ") %>
-                </div>
-                <div class="w-75 text-start">
-                  <%= transaction.description %>
-                </div>
-                <% if transaction.cash_flow_type == "Revenue" %>
-                  <div class="pos">
-                    $<%= transaction.amount.to_i %> <i class="green fa-solid fa-caret-up"></i>
-                  </div>
-                <% else %>
-                  <div class="pos">
-                    $<%= transaction.amount.to_i %> <i class="red fa-solid fa-caret-down"></i>
-                  </div>
-                <% end  %>
+          <div class="w-75 text-center">
+            <h5>Description</h5>
+          </div>
+          <div class="w-auto">
+            <h5>Amount</h5>
+          </div>
+        </div>
+        <% @transactions.each do |transaction| %>
+          <% if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date %>
+            <div class="d-flex flex-row list <%= transaction.cash_flow_type == "Revenue" ? "light-green" : "light-red" %>">
+              <div class="leftcol">
+                <%= transaction.date.strftime("%Y %b %d ") %>
               </div>
-            <% end  %>
-          <% end %>
+              <div class="w-75 text-start">
+                <%= transaction.description %>
+              </div>
+              <% if transaction.cash_flow_type == "Revenue" %>
+                <div class="pos">
+                  $<%= transaction.amount.round %> <i class="green fa-solid fa-caret-up"></i>
+                </div>
+              <% else %>
+                <div class="pos">
+                  $<%= transaction.amount.round %> <i class="red fa-solid fa-caret-down"></i>
+                </div>
+              <% end  %>
+            </div>
+          <% end  %>
+        <% end %>
       </div>
     </div>
 
@@ -81,11 +81,11 @@
                 </div>
                 <% if transaction.cash_flow_type == "Revenue" %>
                   <div class="pos">
-                    $<%= transaction.amount.to_i %> <i class="green fa-solid fa-caret-up"></i>
+                    $<%= transaction.amount.round %> <i class="green fa-solid fa-caret-up"></i>
                   </div>
                 <% else %>
                   <div class="pos">
-                    $<%= transaction.amount.to_i %> <i class="red fa-solid fa-caret-down"></i>
+                    $<%= transaction.amount.round %> <i class="red fa-solid fa-caret-down"></i>
                   </div>
                 <% end  %>
               </div>
@@ -119,11 +119,11 @@
                 </div>
                 <% if transaction.cash_flow_type == "Revenue" %>
                   <div class="pos">
-                    $<%= transaction.amount.to_i %> <i class="green fa-solid fa-caret-up"></i>
+                    $<%= transaction.amount.round %> <i class="green fa-solid fa-caret-up"></i>
                   </div>
                 <% else %>
                   <div class="pos">
-                    $<%= transaction.amount.to_i %> <i class="red fa-solid fa-caret-down"></i>
+                    $<%= transaction.amount.round %> <i class="red fa-solid fa-caret-down"></i>
                   </div>
                 <% end  %>
               </div>

@@ -12,7 +12,7 @@ angus.avatar.attach(io: my_photo, filename: "angus")
 
 # SEED CREATE
 property1 = Property.create!(
-  address: "2503 / 442-450 Elizabeth Street",
+  address: "442-450 Elizabeth Street, Melbourne, Australia",
   bedrooms: 1,
   # bathrooms: 1,
   # garage: "1-car"
@@ -40,7 +40,7 @@ puts "#{property1.address} seeded"
 
 # SEED CREATE
 property2 = Property.create!(
-  address: "5509 / 560 Lonsdale Street",
+  address: "560 Lonsdale Street Melbourne, Australia",
   # description: "Grand Space, Style and Sophistication with Panoramic Bay Views.",
   bedrooms: 2,
   # bathrooms: 2,
@@ -70,7 +70,7 @@ puts "#{property2.address} seeded"
 
 # SEED CREATE
 property3 = Property.create!(
-  address: "1703 / 161 Clarence Street",
+  address: "161 Clarence Street Sydney, Australia",
   bedrooms: 1,
   # bathrooms: 1,
   # garage: "N/A",
