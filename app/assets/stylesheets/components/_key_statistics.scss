@@ -29,11 +29,14 @@
   position: relative;
   padding: 10px 20px 10px;
   z-index: 0;
+  background-color: whitesmoke;
 }
 
 
 .statsOverview--headerIn {
   color: #2bb3c0;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .statsOverview--headerInPercentage {
@@ -68,21 +71,23 @@
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 1px;
+  margin-bottom: 8px;
+  margin-top: 10px;
   color: #2bb3c0;
-  margin-bottom: 0;
 }
 
 .statsOverview--dollarIn {
   margin-top: 8px;
   font-size: 36px;
-  line-height: 46px;
+  line-height: 25px;
   font-weight: 300;
   color: #2bb3c0;
 }
 
 .statsOverview--label {
   color: #393939;
-  font-weight: 700;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 28px;
   font-size: 18px;
@@ -122,14 +127,16 @@
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 1px;
+  margin-bottom: 8px;
+  margin-top: 10px;
   color: #e16123;
-  margin-bottom: 0;
 }
 
 .statsOverview--dollarOut {
   margin-top: 8px;
+
   font-size: 36px;
-  line-height: 46px;
+  line-height: 25px;
   font-weight: 300;
   color: #e16123;
 }
@@ -139,6 +146,8 @@
 
 .statsOverview--headerTotal {
   color: #009378;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .statsOverview--headerTotalPercentage {
@@ -173,14 +182,15 @@
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 1px;
+  margin-bottom: 8px;
+  margin-top: 10px;
   color: #009378;
-  margin-bottom: 0;
 }
 
 .statsOverview--dollarTotal {
   margin-top: 8px;
   font-size: 36px;
-  line-height: 46px;
+  line-height: 25px;
   font-weight: 300;
   color: #009378;
 }
