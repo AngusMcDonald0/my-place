@@ -4,41 +4,19 @@
   bottom: 0;
   width: 100%;
   background-color: #1e3454;
-  color: white;
   text-align: center;
-}
-
-.row {
-  padding-top: 15px;
-}
-
-.footer-neat {
-  margin:0px;
-  list-style-type:none;
-  font-size:12px;
-  padding:0px 0px 10px 0px;
-
-}
-.footer h4 {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  font-style: bold;
-}
-
-.footer li {
-  padding:0px 0px 5px 0px
-}
-.footer a {
-  color: white;
-  font-size: 15px;
-  text-align: center;
-}
-.footer a:hover {
-  color:#fff;
-  text-decoration:none;
+  justify-content: center;
 }
 
 .cr {
   font-size: 14px;
+  color: white;
+}
+
+.footer-links {
+  padding-top: 15px;
+  color: $orange;
+  i:hover {
+  color: rgb(255, 213, 0);
+  }
 }

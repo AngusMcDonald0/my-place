@@ -7,6 +7,17 @@
   padding: 20px 5%;
   display: flex;
   align-items: center;
+  text-shadow: 1px 1px 1px black;
+
+  .nav-item a {
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: rgba(243, 159, 31, 0.4);
+    }
+  }
 }
 
 .navbar-lewagon.home-navbar {
@@ -40,12 +51,4 @@
 #logo {
   color: #F39F1F;
   ;
-}
-
-.nav-item a {
-  font-size: 20px;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

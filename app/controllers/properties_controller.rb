@@ -7,7 +7,7 @@ class PropertiesController < ApplicationController
     @properties = Property.all
     @property = Property.find(params[:id])
     @transaction = Transaction.new
-    @transactions = @property.transactions.sort_by(&:date)
+    @transactions = @property.transactions.sort_by(&:date).reverse
     @past_transactions = @property.transactions.past
     @future_transactions = @property.transactions.future
     @marker = { lat: @property.latitude, lng: @property.longitude }
