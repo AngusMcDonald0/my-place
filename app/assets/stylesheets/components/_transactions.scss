@@ -10,6 +10,7 @@
 
   .details {
     width: 1000px;
+    margin-top: 10px;
   }
 
   .list {
@@ -32,11 +33,17 @@
   }
 
   .light-green {
-    background-color: rgba(43, 179, 192, 0.1);
+    background-color: rgba(43, 179, 192, 0.15);
+    &:hover {
+      background-color: rgba(43, 179, 192, 0.3);
+    }
   }
 
   .light-red {
-    background-color: rgba(225, 97, 35, 0.1);
+    background-color: rgba(225, 97, 35, 0.15);
+    &:hover {
+      background-color: rgba(225, 97, 35, 0.3);
+    }
   }
 
   .green {
@@ -60,5 +67,10 @@
 
   .head {
     font-size: 24px;
+  }
+
+  .nav-item a {
+    font-size: 18px;
+    border-radius: 5px;
   }
 }

@@ -6,65 +6,182 @@
   margin-bottom: 10px;
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-}
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .card-container {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-}
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .card-container {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .card-container {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
 
-.index-card {
-  overflow: hidden;
-  height: 120px;
-  width: 100%;
-  background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+// .index-card {
+//   overflow: hidden;
+//   height: 120px;
+//   width: 100%;
+//   background: white;
+//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+//   display: flex;
+//   align-items: center;
+//   border-radius: 5px;
+// }
+
+// .index-card:hover {
+//   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+// }
+
+// .index-card img {
+//   height: 95%;
+//   width: 200px;
+//   object-fit: cover;
+//   margin: 3px;
+//   border-radius: 3px;
+// }
+
+// .index-card h2 {
+//   font-size: 13px;
+//   font-weight: bold;
+//   color: black;
+// }
+
+// .index-card p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 15px;
+//   margin-top: 8px;
+//   color: black;
+// }
+
+// .index-card .index-card-product-infos {
+//   margin-left: 10px;
+// }
+
+
+// SECOND CARD//
+.overviewGutter {
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
   display: flex;
+  --bs-gutter-x: 3rem;
+  padding: 30px 0 0px 0;
+}
+
+.indexpanel {
+  color: #696969;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+}
+
+.indexOverview--header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px 20px 1px 7px;
+  border-radius: 5px 5px 0 0;
   align-items: center;
-  border-radius: 5px;
+  background-color: #252525;
+  color: white;
 }
 
-.index-card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+.indexOverview--header h1 {
+  font-size: 0.9rem;
+  font-weight: 500;
+
 }
 
-.index-card img {
-  height: 95%;
-  width: 200px;
+.indexOverview--body {
+  position: relative;
+  display: flex;
+  height: 150px;
+}
+
+#propimg {
+  height: 100%;
+  width: 70%;
   object-fit: cover;
-  margin: 3px;
-  border-radius: 3px;
 }
 
-.index-card h2 {
-  font-size: 13px;
-  font-weight: bold;
-  color: black;
+.summary {
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
-.index-card p {
+.summary ul {
+  padding: 5px;
+}
+
+.summary li {
+  list-style: none;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+.indexOverview--headerIn {
+  color: #2bb3c0;
+}
+
+.indexOverview--headerInPercentage {
+  background-color: #2bb3c0;
+  color: white;
+  margin-left: auto;
+  padding: 0 10px;
+  border-radius: 25px;
   font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 15px;
-  margin-top: 8px;
-  color: black;
+  line-height: 25px;
 }
 
-.index-card .index-card-product-infos {
-  margin-left: 10px;
+.fa-level-up-alt {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.fa-money-bill-trend-up {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  margin-top: -40px;
+  font-size: 80px;
+  line-height: 80px;
+  opacity: .25;
+  z-index: -1;
+  color: #2bb3c0;
+}
+
+.indexOverview--rangeIn {
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  color: #2bb3c0;
+  margin-bottom: 0;
+}
+
+.indexOverview--dollarIn {
+  margin-top: 8px;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 300;
+  color: #2bb3c0;
+}
+
+.indexOverview--label {
+  color: #393939;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 28px;
+  font-size: 18px;
 }

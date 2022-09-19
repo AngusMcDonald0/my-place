@@ -1,5 +1,4 @@
 .dashboard-header {
-  padding: 0px 10px 12px 0px;
   background-color: #fff;
   box-shadow: 0 4px 2px -2px grey;
 }
@@ -17,16 +16,21 @@
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  padding: 15px;
+  align-items: center;
+
+  .nav-item a {
+    font-size: 20px;
+    border-radius: 5px;
+  }
 }
 
 .dash-property {
-  color: #e16123;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 20px;
-  padding-top: 28px;
-  padding-left: 15px;
-}
+  margin: 0px;
+ }
 
 #add-transaction-button {
   background-color: white;

@@ -21,21 +21,55 @@
 .banner-container {
   z-index: 1;
   color: white;
-  position: absolute;
-  top: 400px;
-  left: 400px;
-}
 
-.content {
-  text-align: center;
-}
+  .home-button {
+    border-radius: 4px;
+    background-color: #F39F1F;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    padding: 12px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
 
-.home-button {
+  .home-button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
 
-}
+  .home-button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 10px;
+    right: -20px;
+    transition: 0.5s;
+  }
 
-.home-text {
+  .home-button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
 
+  .home-button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+
+  .home-text {
+    text-shadow: 1.5px 1.5px  black;
+    h1 {
+    font-size: 56px;
+    font-weight: 700;
+    }
+  }
 }
 
 @media (min-aspect-ratio: 16/9) {

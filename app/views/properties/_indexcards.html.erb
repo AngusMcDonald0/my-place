@@ -9,3 +9,17 @@
     <%end%>
   <%end%>
   </div>
+
+
+  <div class="card-container">
+    <% @properties.each do |property| %>
+      <%= link_to property_path(property), class: "index-card" do %>
+        <%= cl_image_tag property.photo.key %>
+        <div class="index-card-product-infos">
+          <h2><%= property.address %></h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      <%end%>
+    <%end%>
+  </div>
+</div>
