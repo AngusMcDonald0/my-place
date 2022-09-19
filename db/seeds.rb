@@ -1,4 +1,4 @@
-Transaction.destroy_all && Property.destroy_all && User.destroy_all if Rails.env.development?
+Property.destroy_all && User.destroy_all if Rails.env.development?
 require "uri"
 
 angus = User.create!(
