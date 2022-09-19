@@ -1,4 +1,233 @@
 // // Specific CSS for your home-page
+
+.home-text{
+  display: table;
+  margin: 0 auto;
+  margin-top: 200px;
+
+  h1{
+    font-family: Gotham, Tahoma, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: white;
+    transition: color 0.75s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    position: relative;
+    border: 5px transparent;
+    -webkit-border-image: url(http://maxschulmeister.com/sneakin/assets/images/svg/scanframe.svg) 5 round;
+    -o-border-image: url(http://maxschulmeister.com/sneakin/assets/images/svg/scanframe.svg) 5 round;
+    border-image: url(http://maxschulmeister.com/sneakin/assets/images/svg/scanframe.svg) 5 round;
+    -moz-border-image: url(http://maxschulmeister.com/sneakin/assets/images/svg/scanframe.svg) 5 round;
+  }
+}
+
+.home-text{
+  h1:hover{
+    transition: color 0.75s ease-in-out;
+  }
+
+  h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    visibility: hidden;
+  }
+
+  h1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    visibility: hidden;
+  }
+
+  h1.start-line:before {
+    animation: topleft 1s ease-in-out forwards;
+  }
+
+  h1.start-line:after {
+    animation: bottomright 1s ease-in-out forwards;
+  }
+
+  h1.active:before {
+    animation: revtopleft 1s ease-in-out forwards;
+  }
+
+  h1.active:after {
+    animation: revbottomright 1s ease-in-out forwards;
+  }
+
+  h1.active:before,
+  h1.active:after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+
+  h1.temp:before, a.temp:after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+
+
+}
+
+@keyframes bottomright {
+  0% {
+    width: 0;
+    height: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+  25% {
+    width: 100%;
+    height: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+  50% {
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+  }
+  75% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes revbottomright {
+  0% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+  75% {
+    width: 100%;
+    height: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    padding-top: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes topleft {
+  0% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+  25% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+  50% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+  75% {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+    visibility: visible;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes revtopleft {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+  25% {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+    visibility: visible;
+  }
+  50% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+  75% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // *,
 // html {
 //   scroll-behavior: smooth;

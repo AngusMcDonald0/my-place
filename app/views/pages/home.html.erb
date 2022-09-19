@@ -2,9 +2,14 @@
   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
   <div class="banner-container">
     <div class="home-text">
-      <h1>All-in-One Property Data Management</h1>
+      <h1 data-controller="toggle-class"
+          data-toggle-class-target="toggleElement"
+          data-action="load@window->toggle-class#displayDrop"
+          data-toggle-class-active-class="start-line">
+          All-in-One Property Data Management
+      </h1>
     </div>
-    <div class="home-button">
+    <div class="home-button opacity-0" data-controller="remove-class" data-remove-class-to-remove-class="opacity-0" data-remove-class-delay-value="2500">
       <%= link_to "Get Started!", properties_path, class:"text-white" %>
     </div>
   </div>

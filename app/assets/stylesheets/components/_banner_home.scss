@@ -55,6 +55,9 @@
   .home-button:hover{
     padding-right: 24px;
     padding-left:8px;
+    zoom: 105%;
+    border: #F39F1F 2px solid;
+    box-shadow: 0 0 10px #F39F1F;
   }
 
   .home-button:hover:after {
