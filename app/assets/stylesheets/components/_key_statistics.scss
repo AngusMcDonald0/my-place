@@ -1,4 +1,4 @@
-.overviewGutter{
+.overviewGutter {
   margin-left: -10px;
   margin-right: -10px;
   flex-wrap: wrap;
@@ -7,12 +7,12 @@
   padding: 30px 0 0px 0;
 }
 
-.panel{
-    margin-bottom: 30px;
-    color: #696969;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+.panel {
+  margin-bottom: 30px;
+  color: #696969;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
 }
 
 
@@ -22,7 +22,7 @@
   padding: 15px 20px 1px 20px;
   border-radius: 5px 5px 0 0;
   align-items: center;
-  background-color: #252525;
+  background-color: $dark-blue;
 }
 
 .statsOverview--body {
@@ -32,11 +32,11 @@
 }
 
 
-.statsOverview--headerIn{
+.statsOverview--headerIn {
   color: #2bb3c0;
 }
 
-.statsOverview--headerInPercentage{
+.statsOverview--headerInPercentage {
   background-color: #2bb3c0;
   color: white;
   margin-left: auto;
@@ -46,13 +46,13 @@
   line-height: 25px;
 }
 
-.fa-level-up-alt{
+.fa-level-up-alt {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-weight: 900;
 }
 
-.fa-money-bill-trend-up{
+.fa-money-bill-trend-up {
   position: absolute;
   top: 50%;
   right: 10%;
@@ -64,7 +64,7 @@
   color: #2bb3c0;
 }
 
-.statsOverview--rangeIn{
+.statsOverview--rangeIn {
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 1px;
@@ -72,7 +72,7 @@
   margin-bottom: 0;
 }
 
-.statsOverview--dollarIn{
+.statsOverview--dollarIn {
   margin-top: 8px;
   font-size: 36px;
   line-height: 46px;
@@ -80,7 +80,7 @@
   color: #2bb3c0;
 }
 
-.statsOverview--label{
+.statsOverview--label {
   color: #393939;
   font-weight: 700;
   text-transform: uppercase;
@@ -91,11 +91,11 @@
 
 // SECOND CARD//
 
-.statsOverview--headerOut{
+.statsOverview--headerOut {
   color: #e16123
 }
 
-.statsOverview--headerOutPercentage{
+.statsOverview--headerOutPercentage {
   background-color: #e16123;
   color: white;
   margin-left: auto;
@@ -105,7 +105,7 @@
   line-height: 25px;
 }
 
-#moneyflip{
+#moneyflip {
   position: absolute;
   top: 50%;
   right: 10%;
@@ -118,7 +118,7 @@
   transform: scale(1, -1);
 }
 
-.statsOverview--rangeOut{
+.statsOverview--rangeOut {
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 1px;
@@ -126,7 +126,7 @@
   margin-bottom: 0;
 }
 
-.statsOverview--dollarOut{
+.statsOverview--dollarOut {
   margin-top: 8px;
   font-size: 36px;
   line-height: 46px;
@@ -137,11 +137,11 @@
 
 // 3rd Card//
 
-.statsOverview--headerTotal{
+.statsOverview--headerTotal {
   color: #009378;
 }
 
-.statsOverview--headerTotalPercentage{
+.statsOverview--headerTotalPercentage {
   background-color: #009378;
   color: white;
   margin-left: auto;
@@ -151,13 +151,13 @@
   line-height: 25px;
 }
 
-.fa-hand-holding-dollar{
+.fa-hand-holding-dollar {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-weight: 900;
 }
 
-.fa-money-bill-transfer{
+.fa-money-bill-transfer {
   position: absolute;
   top: 50%;
   right: 10%;
@@ -169,7 +169,7 @@
   color: #009378;
 }
 
-.statsOverview--rangeTotal{
+.statsOverview--rangeTotal {
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 1px;
@@ -177,7 +177,7 @@
   margin-bottom: 0;
 }
 
-.statsOverview--dollarTotal{
+.statsOverview--dollarTotal {
   margin-top: 8px;
   font-size: 36px;
   line-height: 46px;

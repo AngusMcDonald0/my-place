@@ -11,5 +11,15 @@ class Property < ApplicationRecord
     end.sum
   end
 
+  def profitable?
+    if total_profit.positive?
+      return "fa-solid fa-caret-up text-success"
+    elsif total_profit.zero?
+      return "fa-solid fa-caret-right text-warning"
+    else
+      return "fa-solid fa-caret-down text-danger"
+    end
+  end
+
   CATEGORIES = ["Unit", "House"]
 end
