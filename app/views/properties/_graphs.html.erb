@@ -7,24 +7,21 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-
     <div class="col-8">
-      <%= pie_chart @single,colors: ["#eaac8b","#e56b6f", "#b56576", "#6d597a", "#355070"], donut:false, title: "#{@property.address} (Detailed Expenses)" %>
-    </div>
-  </div>
-
-  <div class="graph-card mb-4">
-    <div class="row">
-      <%= bar_chart [["Revenue",  @revenue],["Expense", @expense]],colors: ["#84a59d","#e56b6f", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: "#{@property.address} (Total Revenue & Expense)" %>
-    </div>
-  </div>
-  <div class="graph-card mb-4">
-    <div class="row">
       <%= column_chart [
         {name: @property.address, data: @single},
         {name: "Your Average", data: @average}
       ],
-      title: "Comparison", colors: ["#84a59d","#219ebc"] %>
+      title: "Property Comparison", colors: ["#84a59d","#219ebc"] %>
+    </div>
+  </div>
+
+  <div class="graph-card row mb-4">
+    <div class="col-6">
+      <%= bar_chart [["Revenue",  @revenue],["Expense", @expense]],colors: ["#84a59d","#e56b6f", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: "Total Revenue & Expenses" %>
+    </div>
+    <div class="col-6">
+      <%= pie_chart @single,colors: ["#eaac8b","#e56b6f", "#b56576", "#6d597a", "#355070"], donut:false, title: "Detailed Expenses" %>
     </div>
   </div>
 </div>
