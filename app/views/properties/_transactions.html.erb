@@ -10,7 +10,7 @@
           <a class="nav-link active" data-bs-toggle="pill" href="#current">Current Financial Year (22/23)</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="pill" href="#month">This Month</a>
+          <a class="nav-link" data-bs-toggle="pill" href="#month"><%= Time.now.strftime("%B") %></a>
         </li>
       </ul>
     </div>
@@ -112,7 +112,7 @@
             <% if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year %>
               <div class="d-flex flex-row list <%= transaction.cash_flow_type == "Revenue" ? "light-green" : "light-red" %>">
                 <div class="leftcol">
-                  <%= transaction.date.strftime("%Y %b %d ") %>
+                  <%= transaction.date.strftime("%b %d") %>
                 </div>
                 <div class="w-75 text-start">
                   <%= transaction.description %>
