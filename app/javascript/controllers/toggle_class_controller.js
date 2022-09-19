@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ["toggleElement"]
 
   connect() {
-    console.log(this.toggleElementTargets);
+    // console.log(this.toggleElementTargets);
   }
 
   displayDrop() {

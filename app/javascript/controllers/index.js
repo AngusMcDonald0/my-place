@@ -13,6 +13,9 @@ application.register("hello", HelloController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import RemoveClassController from "./remove_class_controller"
+application.register("remove-class", RemoveClassController)
+
 import ToggleClassController from "./toggle_class_controller"
 application.register("toggle-class", ToggleClassController)
 
