@@ -17,10 +17,16 @@
         </div>
 
         <div class="statsOverview--body">
-          <i class="fa-solid fa-money-bill-trend-up"></i>
-          <p class="statsOverview--rangeIn">Monthly</p>
-          <h3 class="statsOverview--label">Revenue</h3>
-          <p class="statsOverview--dollarIn">$<%= revenue.round() %></p>
+          <div class="row">
+            <div class="col-8">
+              <p class="statsOverview--rangeIn">Monthly</p>
+              <h3 class="statsOverview--label">Revenue</h3>
+              <p class="statsOverview--dollarIn">$<%= revenue.round() %></p>
+            </div>
+            <div class="col-4">
+              <i class="fa-solid fa-money-bill-trend-up"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -39,10 +45,16 @@
         </div>
 
         <div class="statsOverview--body">
-          <i class="fa-solid fa-money-bill-trend-up" id="moneyflip"></i>
-          <p class="statsOverview--rangeOut">Monthly</p>
-          <h3 class="statsOverview--label">Expenses</h3>
-          <p class="statsOverview--dollarOut">$<%=expense.round()%></p>
+          <div class="row">
+            <div class="col-8">
+              <p class="statsOverview--rangeOut">Monthly</p>
+              <h3 class="statsOverview--label">Expenses</h3>
+              <p class="statsOverview--dollarOut">$<%=expense.round()%></p>
+            </div>
+            <div class="col-4">
+              <i class="fa-solid fa-money-bill-trend-up" id="moneyflip"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -61,14 +73,18 @@
         </div>
 
         <div class="statsOverview--body">
-          <i class="fa-solid fa-money-bill-transfer"></i>
-          <p class="statsOverview--rangeTotal">Monthly</p>
-          <h3 class="statsOverview--label">Total</h3>
-          <p class="statsOverview--dollarTotal">$<%=total.round()%></p>
+          <div class="row">
+            <div class="col-8">
+              <p class="statsOverview--rangeTotal">Monthly</p>
+              <h3 class="statsOverview--label">Total</h3>
+              <p class="statsOverview--dollarTotal">$<%=total.round()%></p>
+            </div>
+            <div class="col-4">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-
   </div>
 </div>
