@@ -84,21 +84,21 @@
   color: #696969;
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+  margin-bottom: 15px;
 }
 
 .indexOverview--header {
   display: flex;
   flex-wrap: wrap;
   padding: 7px 20px 1px 7px;
-  border-radius: 5px 5px 0 0;
   align-items: center;
-  background-color: #252525;
+  background-color: $dark-blue;
   color: white;
 }
 
 .indexOverview--header h1 {
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 700;
 
 }
 
@@ -118,17 +118,23 @@
   display: flex;
   text-align: center;
   align-items: center;
+
+  ul {
+    padding: 5px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 0.8rem;
+    margin: 5px;
+  }
+
+  i {
+    font-size: 20px;
+  }
 }
 
-.summary ul {
-  padding: 5px;
-}
 
-.summary li {
-  list-style: none;
-  font-size: 0.8rem;
-  margin: 5px;
-}
 
 .indexOverview--headerIn {
   color: #2bb3c0;

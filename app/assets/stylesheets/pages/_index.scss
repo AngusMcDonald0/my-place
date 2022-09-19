@@ -1,14 +1,49 @@
 // Import page-specific CSS files here.
 @import "home";
 
-.index-container {}
-
 .detailbox {
-  background-color: white;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+  margin: 0;
 }
 
 .propertybox {
-  background-color: white;
+  height: calc(100vh - -100px);
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.799);
+    border-radius: 50px;
+    height: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.maping {
+  margin: 15px 0px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+  border-radius: 5px;
+}
+
+.graphing {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
+  border-radius: 5px;
+}
+
+.index-container h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
