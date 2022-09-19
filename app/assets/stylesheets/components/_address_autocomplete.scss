@@ -1,0 +1,49 @@
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  box-shadow: none;
+  background-color: transparent;
+}
+.mapboxgl-ctrl-geocoder--pin-right{
+  display: none;
+}
+.mapboxgl-ctrl-geocoder--icon{
+  display: none;
+}
+
+
+.suggestions-wrapper{
+
+
+  ul{
+    display: none;
+    list-style-type: none;
+    padding-left: 0;
+    // padding-right: 10px;
+    text-align: left;
+    position: absolute;
+    background-color: white;
+    max-height: 300px;
+    overflow: scroll;
+  }
+
+  li{
+    border-bottom: 1px black solid;
+    padding: 5px;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f5a0";
+    font-weight: 900;
+    margin: 0 8px;
+  }
+
+  li:hover{
+    background-color: aliceblue;
+    font-weight: bold;
+  }
+}
