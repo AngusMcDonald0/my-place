@@ -10,6 +10,7 @@
 
   .details {
     width: 1000px;
+    margin-top: 10px;
   }
 
   .list {
@@ -66,5 +67,10 @@
 
   .head {
     font-size: 24px;
+  }
+
+  .nav-item a {
+    font-size: 18px;
+    border-radius: 5px;
   }
 }
