@@ -89,6 +89,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-# .env creation
-gem "dotenv-rails", groups: [:development, :test]
