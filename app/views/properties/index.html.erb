@@ -1,61 +1,67 @@
-<div class="container index-container">
-  <div class="row d-flex mt-3">
-    <div class="col-6 detailbox">
-      <div class="graphing">
-        <div class="indexOverview--header">
-          <p class="indexOverview--headerIn">
-            <h2>Overview</h2>
-          </p>
+<div>
+  <%= render "dashboardnavbar" %>
+  <div class="col-6" data-properties-target="addpropertyform">
+      <%= render "addpropertyform" %>
+  </div>
+  <div class="container index-container">
+    <div class="row d-flex mt-3">
+      <div class="col-6 detailbox">
+        <div class="graphing">
+          <div class="indexOverview--header">
+            <p class="indexOverview--headerIn">
+              <h2>Overview</h2>
+            </p>
+          </div>
+          <div class="graph bg-white rounded">
+            <% data_hash = {} %>
+            <% Property.all.each do |property| %>
+              <% data_hash[property.address] = property.total_profit %>
+            <% end %>
+            <%= column_chart data_hash, title: "All Properties (Net Income)", prefix: "$", download: {background: "#ffffff"}, colors: ["#f6bd60", "#84a59d", "#f7ede2", "#f5cac3", "#f28482"] %>
+          </div>
         </div>
-        <div class="graph bg-white rounded">
-          <% data_hash = {} %>
-          <% Property.all.each do |property| %>
-            <% data_hash[property.address] = property.total_profit %>
-          <% end %>
-          <%= column_chart data_hash, title: "All Properties (Net Income)", prefix: "$", download: {background: "#ffffff"}, colors: ["#f6bd60", "#84a59d", "#f7ede2", "#f5cac3", "#f28482"] %>
+        <div class="maping">
+          <div class="indexOverview--header">
+            <p class="indexOverview--headerIn">
+              <h2>Properties Location</h2>
+            </p>
+          </div>
+          <div style="width: 100%; height: 300px; border-radius: 5px;"
+            data-controller="map"
+            data-map-marker-value="<%= @marker.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
       </div>
-      <div class="maping">
-        <div class="indexOverview--header">
-          <p class="indexOverview--headerIn">
-            <h2>Properties Location</h2>
-          </p>
-        </div>
-        <div style="width: 100%; height: 300px; border-radius: 5px;"
-          data-controller="map"
-          data-map-marker-value="<%= @marker.to_json %>"
-          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
-      </div>
-    </div>
 
-    <div class="col-6 propertybox">
-        <% @properties.each do |property| %>
-          <%= link_to property_path(property) do %>
-            <div class="indexpanel">
-              <div class="indexOverview--header">
-                <p class="indexOverview--headerIn">
-                  <h2><%= property.address%></h2>
-                </p>
-              </div>
-              <div class="indexOverview--body">
-                <%= cl_image_tag property.photo.key, id: "propimg" %>
-                <div class="summary">
-                  <ul>
-                    <li class="d-flex">
-                      <i class="fa-solid fa-bed text-warning"></i>
-                      <p><%= property.bedrooms %></p>
-                    </li>
-                    <li class="d-flex">
-                      <i class="<%= property.profitable? %>"></i>
-                      <p><%= property.total_profit.to_i %> AUD</p>
-                    </li>
-                  </ul>
+      <div class="col-6 propertybox">
+          <% @properties.each do |property| %>
+            <%= link_to property_path(property) do %>
+              <div class="indexpanel">
+                <div class="indexOverview--header">
+                  <p class="indexOverview--headerIn">
+                    <h2><%= property.address%></h2>
+                  </p>
+                </div>
+                <div class="indexOverview--body">
+                  <%= cl_image_tag property.photo.key, id: "propimg" %>
+                  <div class="summary">
+                    <ul>
+                      <li class="d-flex">
+                        <i class="fa-solid fa-bed text-warning"></i>
+                        <p><%= property.bedrooms %></p>
+                      </li>
+                      <li class="d-flex">
+                        <i class="<%= property.profitable? %>"></i>
+                        <p><%= property.total_profit.to_i %> AUD</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+            <%end %>
           <%end %>
-        <%end %>
+      </div>
     </div>
   </div>
 </div>

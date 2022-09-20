@@ -21,3 +21,6 @@ application.register("toggle-class", ToggleClassController)
 
 import TransactionsController from "./transactions_controller"
 application.register("transactions", TransactionsController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)

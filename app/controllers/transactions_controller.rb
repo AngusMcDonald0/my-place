@@ -3,10 +3,17 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @property = Property.find(params[:property_id])
     @transaction.property = @property
-    if @transaction.save
-      redirect_to property_path(@property), alert: "Transaction Created!"
-    else
-      render :show, status: :unprocessable_entity
+    respond_to do |format|
+      if @transaction.save
+        format.html { redirect_to property_path(@property), alert: "Transaction Created!" }
+        format.json {}
+      else
+        format.html do
+          @transactions = @property.transactions
+          render "properties/show", status: :unprocessable_entity
+        end
+        format.json {}
+      end
     end
   end
 
