@@ -9,4 +9,5 @@ class Transaction < ApplicationRecord
   scope :mortgages, -> { where(category: "Mortgage") }
   scope :others, -> { where(category: "Other") }
   belongs_to :property
+  validates :description, presence: true, length: { maximum: 90 }
 end
