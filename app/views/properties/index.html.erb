@@ -50,6 +50,12 @@
                       <i class="<%= property.profitable? %>"></i>
                       <p><%= property.total_profit.to_i %> AUD</p>
                     </li>
+                    <li class="d-flex">
+                     <p><%= link_to "Edit", property_path(property), class:"card-product-infos button" %></p>
+                    </li>
+                    <li class="d-flex">
+                      <p><%= link_to "Delete", property_path(property), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this transaction?" } %></p>
+                    </li>
                   </ul>
                 </div>
               </div>
