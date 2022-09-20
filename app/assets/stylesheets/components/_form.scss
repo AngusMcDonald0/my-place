@@ -63,6 +63,22 @@
   }
 }
 
-#property_bedrooms{
-  line-height: 1.9;
+
+
+#transaction_cash_flow_type_revenue + label {
+  color: #1e3454;
+}
+
+#transaction_cash_flow_type_revenue:checked + label {
+  background-color: #1e3454;
+  border: 2px solid #F39F1F;
+}
+
+#transaction_cash_flow_type_expense + label {
+  color: #1e3454;
+}
+
+#transaction_cash_flow_type_expense:checked + label {
+  background-color: #1e3454;
+  border: 2px solid #F39F1F;
 }

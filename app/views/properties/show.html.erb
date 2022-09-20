@@ -1,24 +1,25 @@
 <div data-controller="transactions">
-  <%= render "propertynavbar", property: @property %>
+
+  <%= render "properties/propertynavbar", property: @property %>
   <div class="container" data-controller="update-modal">
 
     <div class="col-6" data-transactions-target="form">
-      <%= render "transactions/form" %>
+      <%= render "transactions/modal" %>
     </div>
 
-    <%= render "key_statistics", property: @property %>
+    <%= render "properties/key_statistics", property: @property %>
 
     <div class="transaction-container">
       <div class="tab-content">
 
         <div class="tab-pane container active" id="transactions">
           <div class="section">
-            <%= render "transactions" %>
+            <%= render "properties/transactions" %>
           </div>
         </div>
 
         <div class="tab-pane container fade" id="graphs">
-          <%= render "graphs" %>
+          <%= render "properties/graphs" %>
         </div>
 
       </div>

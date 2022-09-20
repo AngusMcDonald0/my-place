@@ -3,6 +3,7 @@ require_relative "../services/fetch_price_service"
 class PropertiesController < ApplicationController
   def index
     @properties = Property.all
+    @property = Property.new
   end
 
   def show
