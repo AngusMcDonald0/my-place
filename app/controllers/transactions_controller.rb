@@ -6,13 +6,13 @@ class TransactionsController < ApplicationController
     respond_to do |format|
       if @transaction.save
         format.html { redirect_to property_path(@property), alert: "Transaction Created!" }
-        format.json {}
+        format.json { redirect_to property_path(@property), alert: "Transaction Created!" }
       else
         format.html do
           @transactions = @property.transactions
           render "properties/show", status: :unprocessable_entity
         end
-        format.json {}
+        format.text { render partial: "form", locals: { property: @property, transaction: @transaction }, formats: [:html] }
       end
     end
   end

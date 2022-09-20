@@ -16,6 +16,9 @@ application.register("map", MapController)
 import RemoveClassController from "./remove_class_controller"
 application.register("remove-class", RemoveClassController)
 
+import SubmitTransactionController from "./submit_transaction_controller"
+application.register("submit-transaction", SubmitTransactionController)
+
 import ToggleClassController from "./toggle_class_controller"
 application.register("toggle-class", ToggleClassController)
 
