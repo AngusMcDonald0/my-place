@@ -55,3 +55,4 @@ p price_of_suburb_response["data"]["propertyCategories"][3]["medianRentPrice"]
 #     console.log(data)
 #   })
 # }
+

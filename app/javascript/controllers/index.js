@@ -21,3 +21,6 @@ application.register("toggle-class", ToggleClassController)
 
 import TransactionsController from "./transactions_controller"
 application.register("transactions", TransactionsController)
+
+import UpdateModalController from "./update_modal_controller"
+application.register("update-modal", UpdateModalController)
