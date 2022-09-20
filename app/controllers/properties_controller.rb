@@ -16,18 +16,25 @@ class PropertiesController < ApplicationController
     @revenue = @property.transactions.revenues.sum(:amount)
     @expense = @property.transactions.expenses.sum(:amount)
 
+    # date categorization of transactions
     @last = []
     @current = []
     @month = []
+    @last_count = 0
+    @current_count = 0
+    @month_count = 0
     @transactions.each do |transaction|
       if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date
         @last << transaction
+        @last_count += transaction.amount
       end
       if transaction.date > "2022-06-30".to_date
         @current << transaction
+        @current_count += transaction.amount
       end
       if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year
         @month << transaction
+        @month_count += transaction.amount
       end
     end
   end
