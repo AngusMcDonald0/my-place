@@ -27,3 +27,5 @@ application.register("transactions", TransactionsController)
 
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
+import UpdateModalController from "./update_modal_controller"
+application.register("update-modal", UpdateModalController)

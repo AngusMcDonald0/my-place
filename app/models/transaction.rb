@@ -13,4 +13,5 @@ class Transaction < ApplicationRecord
   scope :others, -> { where(category: "Other") }
   belongs_to :property
   CATEGORIES = ["Revenue", "Expense"]
+  validates :description, presence: true, length: { maximum: 90 }
 end

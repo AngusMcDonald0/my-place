@@ -1,4 +1,6 @@
 class TransactionsController < ApplicationController
+  before_action :set_transaction, only: [:update, :destroy]
+
   def create
     @transaction = Transaction.new(transaction_params)
     @property = Property.find(params[:property_id])
@@ -17,7 +19,34 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def update
+    @property = @transaction.property
+    if @transaction.update(transaction_params)
+      redirect_to property_path(@property)
+    else
+      render :show, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @property = Property.find(params[:property_id])
+    @transaction = Transaction.find(params[:id])
+
+    respond_to do |format|
+      format.json
+    end
+  end
+
+  def destroy
+    @property = @transaction.property
+    @transaction.destroy
+    redirect_to property_path(@property)
+  end
   private
+
+  def set_transaction
+    @transaction = Transaction.find(params[:id])
+  end
 
   def transaction_params
     params.require(:transaction).permit(:cash_flow_type, :date, :category, :amount, :description)

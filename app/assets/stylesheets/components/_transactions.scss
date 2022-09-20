@@ -1,5 +1,5 @@
 .section {
-  min-height: 600px;
+  height: calc(100vh - 445px);
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
@@ -9,7 +9,7 @@
 .transaction-container {
 
   .details {
-    width: 1000px;
+    width: 1027px;
     margin-top: 10px;
 
   }
@@ -20,10 +20,20 @@
     border-radius: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 120px;
   }
 
-  .leftcol {
+  .left-col {
     width: 150px;
+  }
+
+  .desc-col {
+    width: 670px;
+  }
+
+  .amnt-col {
+    width: 160px;
+    padding-left: 60px;
   }
 
   .pos {
@@ -54,6 +64,11 @@
   .red {
     color: #e16123;
   }
+
+  .no-data {
+    margin-top: 150px;
+    font-size: 24px;
+  }
 }
 // #######################
 
@@ -82,3 +97,32 @@
 //   height: 450px;
 //   overflow-y: scroll;
 // }
+
+.summary-box {
+  height: calc(100vh - 596px);
+  overflow-y: scroll;
+  // margin-left: 250px;
+  justify-content: center;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    // background: #f1f1f1;
+    border-radius: 50px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #393939;
+    border-radius: 50px;
+    height: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

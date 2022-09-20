@@ -1,0 +1,24 @@
+
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateModalLabel">Add a new transaction</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for [property, transaction], html: { data: { "update-modal-target": "form" } } do |t| %>
+            <%= t.input :cash_flow_type, :collection => %w[Revenue Expense], include_blank: false %>
+            <%= t.input :date %>
+            <%# t.input :frequency, collection: [ ["weekly", 7], ["monthly", 30], ["quarterly", 120] ] %>
+            <%= t.input :category, collection: ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"], include_blank: false %>
+            <%= t.input :amount, placeholder: "200 AUD" %>
+            <%= t.input :description, placeholder: "Electricity" %>
+        </div>
+        <div class="modal-footer">
+            <%= t.submit class: "btn btn-primary text-white" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
