@@ -54,7 +54,7 @@
                   <div class="pos">
                     $<%= transaction.amount.round %> <i class="red fa-solid fa-caret-down"></i>
                   </div>
-                <% end  %>
+                <% end %>
               </div>
             <% end %>
           <% end %>
@@ -89,6 +89,10 @@
                   </div>
                   <div class="w-75 text-start">
                     <%= transaction.description %>
+                    <%= link_to "delete", transaction_path(transaction), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this transaction?" } %>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="add-transaction-button" data-action="click->update-modal#updateForm">
+                    Edit<span class="d-none" id="propertyId"><%= @property.id %></span><span class="d-none" id="transactionId"><%= transaction.id %></span>
+                    </a>
                   </div>
                   <% if transaction.cash_flow_type == "Revenue" %>
                     <div class="pos">
@@ -102,6 +106,9 @@
                 </div>
               <% end %>
             <% end %>
+            <div class="summary-footer">
+              total = <%= @current_count.round %>
+            </div>
           </div>
       </div>
     </div>
