@@ -1,3 +1,5 @@
+require_relative "../services/fetch_price_service"
+
 class PropertiesController < ApplicationController
   def index
     @properties = Property.all
@@ -15,6 +17,7 @@ class PropertiesController < ApplicationController
     @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
     @revenue = @property.transactions.revenues.sum(:amount)
     @expense = @property.transactions.expenses.sum(:amount)
+    @average_suburb_price = FetchPriceService.new(@property).call
   end
 
   def new
