@@ -15,6 +15,21 @@ class PropertiesController < ApplicationController
     @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
     @revenue = @property.transactions.revenues.sum(:amount)
     @expense = @property.transactions.expenses.sum(:amount)
+
+    @last = []
+    @current = []
+    @month = []
+    @transactions.each do |transaction|
+      if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date
+        @last << transaction
+      end
+      if transaction.date > "2022-06-30".to_date
+        @current << transaction
+      end
+      if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year
+        @month << transaction
+      end
+    end
   end
 
   def new
