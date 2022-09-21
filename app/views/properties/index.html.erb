@@ -45,7 +45,7 @@
         <%= link_to property_path(property), class: "indexpanel" do %>
           <div class="indexOverview--header">
             <p class="indexOverview--headerIn">
-              <h2><%= property.address%></h2>
+              <h2><%= property.address%>, <%= property.suburb %>, <%= property.state %></h2>
             </p>
           </div>
           <div class="row index-card-row">
