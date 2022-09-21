@@ -5,6 +5,8 @@ angus = User.create!(
   email: "angus@test.com",
   password: "123456",
   password_confirmation: "123456",
+  first_name: "Angus",
+  last_name: "Mcdonald"
 )
 
 my_photo = URI.open("https://avatars.githubusercontent.com/u/108924749?v=4")
@@ -12,21 +14,17 @@ angus.avatar.attach(io: my_photo, filename: "angus")
 
 # SEED CREATE
 property1 = Property.create!(
-  address: "442-450 Elizabeth Street, Melbourne, Australia",
-  bedrooms: 1,
-  # bathrooms: 1,
-  # garage: "1-car"
-  # area: 50,
-  # category: "Apartment",
-  # suburb: "Melbourne",
-  # state: "Victoria",
-  # postcode: 3000
+  address: "450 Elizabeth Street",
+  bedrooms: 2,
+  suburb: "Melbourne",
+  state: "VIC",
+  postcode: "3000",
   user: angus,
   property_type: "unit"
 )
 
 # PHOTO 1
-file = URI.open("https://www.thepinnaclelist.com/wp-content/uploads/2020/12/001-SHINE-Luxury-Apartment-Interior-Design-Dnipro-Ukraine-Svoya-Studio.jpeg")
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/542d1fa930dd7ee3a35bbbb0346190edb6032ee3210a9b9a5d074479eba10d0c/image.jpg")
 property1.photo.attach(io: file, filename: property1.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/ac86f8eb38800c1868abb13cbddc0a19a2164c3f1470feb918f5be9fd7976a07/image.jpg")
@@ -40,23 +38,17 @@ puts "#{property1.address} seeded"
 
 # SEED CREATE
 property2 = Property.create!(
-  address: "560 Lonsdale Street Melbourne, Australia",
-  # description: "Grand Space, Style and Sophistication with Panoramic Bay Views.",
-  bedrooms: 2,
-  # bathrooms: 2,
-  # garage: "1-car"
-  # area: "N/A",
-  # category: "Apartment",
-  # suburb: "Melbourne",
-  # state: "Victoria",
-  # postcode: 3000
+  address: "25 Valley Parade",
+  bedrooms: 4,
+  suburb: "Glen Iris",
+  state: "VIC",
+  postcode: "3146",
   user: angus,
-  # price: 780000,
   property_type: "house"
 )
 
 # PHOTO 1
-file = URI.open("https://www.realestate.com.au/blog/images/550x330-fit,progressive/2016/05/HOUSE-1-550.jpg")
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/8c6e3249320e8a8a1655d5e21065f42802fa1b7fb9e0ce7ab6c546aa682434c9/image.jpg")
 property2.photo.attach(io: file, filename: property2.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/d8ae76635fe5e9f7785c4fa858c92171e78d6b441a7590a78576d9b50296edcf/image.jpg")
@@ -70,22 +62,17 @@ puts "#{property2.address} seeded"
 
 # SEED CREATE
 property3 = Property.create!(
-  address: "161 Clarence Street Sydney, Australia",
-  bedrooms: 1,
-  # bathrooms: 1,
-  # garage: "N/A",
-  # area: 48,
-  # category: "Apartment",
-  # suburb: "Sydney",
-  # state: "New South Wales",
-  # postcode: 2000
+  address: "61 Stawell Street",
+  bedrooms: 2,
+  suburb: "Richmond",
+  state: "VIC",
+  postcode: 3121,
   user: angus,
-  # price: 1000000,
   property_type: "unit"
 )
 
 # PHOTO 1
-file = URI.open("https://i.pinimg.com/originals/24/e8/f0/24e8f08ba83e34213572acbdb1061bf0.jpg")
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/c2d47097b4bd822aa16b9ca5592f0c2ce0d18e3383228f3f97ff07eb45763321/image.jpg")
 property3.photo.attach(io: file, filename: property3.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/1daa0a8bb756433bf553ed0d7f9c67c341696023195bc695ab3ba852efaae157/image.jpg")
@@ -95,65 +82,6 @@ property3.photo.attach(io: file, filename: property3.address)
 # properties.photo.attach(io: file, filename: properties.address)
 
 puts "#{property3.address} seeded"
-
-
-# properties = Property.create!(
-#   address: "34 / 180 Stirling Street",
-#   # description: "Luxury 1x1x1 in Zenith Apartment.",
-#   bedrooms: 1,
-#   # bathrooms: 1,
-#   # garage: "1-car",
-#   # area: 50,
-#   # category: "Apartment",
-#   # suburb: "Perth",
-#   # state: "Western Australia",
-#   # postcode: 6000
-#   user: angus,
-#   # price: 675000,
-#   property_type: "house"
-# )
-
-# # PHOTO 1
-# file = URI.open("https://thenewdaily.com.au/wp-content/uploads/2018/05/1526025572-WORD9699_Crown-Sydney_IN11_Premium-Apartment_Living.jpg")
-# properties.photo.attach(io: file, filename: properties.address)
-# # PHOTO 2
-# # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/34c210f2444e9630e975a05f82bd65c49d456e84a74571415a1a67e395255782/image.jpg")
-# # properties.photo.attach(io: file, filename: properties.address)
-# # # PHOTO 3
-# # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/95550bf324b1011d1f188243d35b976480b6951c9958ccf3450ba50fa6322977/image.jpg")
-# # properties.photo.attach(io: file, filename: properties.address)
-
-# puts "#{properties.address} seeded"
-
-
-
-# properties = Property.create!(
-#   address: "843 Cambridge Road",
-#   # description: "Space and convenience in magnificent semi-rural property.",
-#   bedrooms: 5,
-#   # bathrooms: 3,
-#   # garage: "4-car",
-#   # area: 2766,
-#   # category: "House",
-#   # suburb: "Cambridge",
-#   # state: "Tasmania",
-#   # postcode: 7170
-#   user: angus,
-#   # price: 1380000
-#   property_type: "unit"
-# )
-
-# # PHOTO 1
-# file = URI.open("http://www.realestate2buy.com/home/domains/www.realestate2buy.com/public_html/wp-content/uploads//2016/11/Apartment-Aus-770x386.jpg")
-# properties.photo.attach(io: file, filename: properties.address)
-# # PHOTO 2
-# # file = URI.open("https://i2.au.reastatic.net/1840x1040-resize,r=33,g=40,b=46/6de3cf593a6afa43c4ef9cc06173109e75b213ce528b65f9445ea8e74ea2aace/image.jpg")
-# # properties.photo.attach(io: file, filename: properties.address)
-# # # PHOTO 3
-# # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/ccab3ff801521c4359f1c846d013e4186b752ac03986a82c8e0c384dba5489c9/image.jpg")
-# # properties.photo.attach(io: file, filename: properties.address)
-
-# puts "#{properties.address} seeded"
 
 category = ["Maintenance", "Utility", "Mortgage"]
 description = ["Electrician", "Major Repairs", "Mortgage Repayment", "Rates", "Water"]

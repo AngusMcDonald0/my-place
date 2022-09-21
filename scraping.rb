@@ -27,8 +27,8 @@ price_of_suburb_response = HTTParty.get("https://api.domain.com.au/v1/locations/
 p price_of_suburb_response
 
 p price_of_suburb_response["suburbName"]
-p price_of_suburb_response["renterPercentage"]
-p price_of_suburb_response["mostCommonAgeBracket"]
+p price_of_suburb_response["data"]["renterPercentage"]
+p price_of_suburb_response["data"]["mostCommonAgeBracket"]
 p price_of_suburb_response["data"]["apartmentsAndUnitsForRent"]
 p price_of_suburb_response["data"]["semiDetachedHousesForRent"]
 p price_of_suburb_response["data"]["propertyCategories"][0]["bedrooms"]
@@ -55,4 +55,3 @@ p price_of_suburb_response["data"]["propertyCategories"][3]["medianRentPrice"]
 #     console.log(data)
 #   })
 # }
-
