@@ -53,19 +53,19 @@
   }
 
   h1.start-line:before {
-    animation: topleft 1s ease-in-out forwards;
+    animation: topleft 1.5s ease-in-out forwards;
   }
 
   h1.start-line:after {
-    animation: bottomright 1s ease-in-out forwards;
+    animation: bottomright 1.5s ease-in-out forwards;
   }
 
   h1.active:before {
-    animation: revtopleft 1s ease-in-out forwards;
+    animation: revtopleft 1.5s ease-in-out forwards;
   }
 
   h1.active:after {
-    animation: revbottomright 1s ease-in-out forwards;
+    animation: revbottomright 1.5s ease-in-out forwards;
   }
 
   h1.active:before,
