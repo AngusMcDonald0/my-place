@@ -1,5 +1,5 @@
 <div class="modal-body">
-  <%= simple_form_for [property, transaction], data: { controller: "submit-transaction", action: "submit->submit-transaction#submitForm" } do |t| %>
+  <%= simple_form_for [property, Transaction.new], data: { action: "submit->submit-transaction#submitForm", submit_transaction_target: "form" } do |t| %>
     <%= t.input :cash_flow_type, :collection => %w[Revenue Expense], as: :radio_buttons, wrapper_html: { class: "mb-4"},
         collection_wrapper_tag: 'div',
         collection_wrapper_class: 'category-wrapper',

@@ -5,16 +5,41 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @property = Property.find(params[:property_id])
     @transaction.property = @property
-    if @transaction.save
-      redirect_to property_path(@property), alert: "Transaction Created!"
-    else
-      respond_to do |format|
+    respond_to do |format|
+      if @transaction.save
+        @last = []
+        @current = []
+        @month = []
+        @properties = Property.all
+        @transactions = @property.transactions.sort_by(&:date).reverse
+        @past_transactions = @property.transactions.past
+        @future_transactions = @property.transactions.future
+        @marker = { lat: @property.latitude, lng: @property.longitude }
+        @average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h }
+        @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
+        @revenue = @property.transactions.revenues.sum(:amount)
+        @expense = @property.transactions.expenses.sum(:amount)
+        @suburb_overview = FetchPriceService.new(@property).call
+        @suburb_overview = FetchPriceService.new(@property).call
+        @transactions.each do |transaction|
+          if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date
+            @last << transaction
+          end
+          if transaction.date > "2022-06-30".to_date
+            @current << transaction
+          end
+          if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year
+            @month << transaction
+          end
+        end
+        format.html { redirect_to property_path(@property), alert: "Transaction Created!" }
+      else
         format.html do
           @transactions = @property.transactions
           render "properties/show", status: :unprocessable_entity
         end
-        format.text { render partial: "form", locals: { property: @property, transaction: @transaction }, formats: [:html] }
       end
+      format.json
     end
   end
 
