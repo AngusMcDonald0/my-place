@@ -30,18 +30,16 @@
 
 .transaction-container {
   .details {
-    width: 1027px;
+    // width: 1027px;
     margin-top: 10px;
-
+    padding: 0px 120px 0px 120px;
   }
 
   .list {
-    width: 1000px;
+    // width: 1000px;
     padding: 3px;
     border-radius: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 120px;
+    margin: 5px 120px 5px 120px;
 
     a {
       visibility: hidden;
@@ -66,21 +64,22 @@
   }
 
   .desc-col {
-    width: 670px;
+    width: 75%;
   }
 
   .amnt-col {
-    width: 160px;
-    padding-left: 60px;
+    width: 90px;
+    margin-right: 13px;
   }
 
   .pos {
-    width: 69px;
+    width: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-left: 3px solid white;
-    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
   }
 
   .light-green {
@@ -196,6 +195,7 @@
     .total {
       padding: 5px 10px 5px 10px;
       border-radius: 30px;
+      font-weight: bold;
     }
   }
 }
