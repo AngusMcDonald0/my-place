@@ -15,7 +15,14 @@ class PropertiesController < ApplicationController
   def show
     @properties = Property.all
     @property = Property.find(params[:id])
-    @transactions = @property.transactions.sort_by(&:date).reverse
+    # @transactions = @property.transactions.sort_by(&:date).reverse
+    if params[:filter].present?
+      if params[:filter] == "Show All"
+        @transactions = @property.transactions.sort_by(&:date).reverse
+      else
+        @transactions = @property.transactions.where("category ILIKE ?", "%#{params[:filter]}%")
+      end
+    end
     @past_transactions = @property.transactions.past
     @future_transactions = @property.transactions.future
     @marker = { lat: @property.latitude, lng: @property.longitude }

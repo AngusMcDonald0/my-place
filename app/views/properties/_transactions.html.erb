@@ -2,6 +2,17 @@
   <div class="label">
     <div class="head">Transaction Summary</div>
     <div class="row">
+
+
+      <div class="filter-dropdown">
+        <%= form_with url: property_path(@property), method: :get do %>
+        <%= select_tag :filter, options_for_select([ "Show All", "Maintenance", "Mortgage", "Rental Income", "Utilities", "Other" ], "Show All")
+          %>
+        <%= submit_tag "Filter", class: "filter-btn" %>
+        <% end %>
+      </div>
+
+
       <ul class="nav nav-pills justify-content-center">
         <% unless @last.empty? %>
           <li class="nav-item">
