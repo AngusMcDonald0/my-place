@@ -51,23 +51,6 @@ class PropertiesController < ApplicationController
     end
   end
 
-  def edit
-    @property = Property.find(params[:id])
-  end
-
-  def update
-    if @property.update(property_params)
-      redirect_to property_path(@property), alert: "Property Updated!"
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-
-  def destroy
-    @property.destroy
-    redirect_to property_path(@property), alert: "Property Deleted!"
-  end
-
   private
 
   def property_params
