@@ -91,14 +91,14 @@
                   <div class="left-col">
                     <%= transaction.date.strftime("%Y %b %d ") %>
                   </div>
-                  <div class="transaction-description w-75 text-start">
+                  <div class="transaction-description">
                     <%= transaction.description %>
                     <div>
-                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" id="add-transaction-button" data-action="click->update-modal#updateForm">
-                      <a class="fa-solid fa-pen-to-square pe-2"></a> <span class="d-none" id="propertyId"><%= @property.id %></span><span class="d-none" id="transactionId"><%= transaction.id %></span>
+                      <a class="transaction-edit-btn" data-action="click->update-modal#updateForm">
+                        <i class="fa-solid fa-pen-to-square pe-2"></i> <span class="d-none" id="propertyId"><%= @property.id %></span><span class="d-none" id="transactionId"><%= transaction.id %></span>
                       </a>
-                      <%= link_to transaction_path(transaction), data: { turbo_method: :delete } do %>
-                        <a class="fa-sharp fa-solid fa-trash"></a>
+                      <%= link_to transaction_path(transaction), data: { turbo_method: :delete }, class: "transaction-delete-btn" do %>
+                        <i class="fa-sharp fa-solid fa-trash"></i>
                       <% end %>
                     </div>
                   </div>

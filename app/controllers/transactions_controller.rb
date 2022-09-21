@@ -6,7 +6,7 @@ class TransactionsController < ApplicationController
     @property = Property.find(params[:property_id])
     @transaction.property = @property
     if @transaction.save
-      redirect_to property_path(@property), alert: "Transaction Created!"
+      redirect_to property_path(@property), notice: "Transaction Added!"
     else
       respond_to do |format|
         format.html do
@@ -39,8 +39,9 @@ class TransactionsController < ApplicationController
   def destroy
     @property = @transaction.property
     @transaction.destroy
-    redirect_to property_path(@property), status: :see_other
+    redirect_to property_path(@property), status: :see_other, alert: "Transaction removed"
   end
+
   private
 
   def set_transaction

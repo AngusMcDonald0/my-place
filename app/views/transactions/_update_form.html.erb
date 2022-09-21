@@ -1,23 +1,28 @@
 
-  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="updateModalLabel">Add a new transaction</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="update-form-container">
+    <div class="update-form-background">
+      <div>
+        <div class="update-form-header">
+          <h5>Update <%= transaction.description %></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-action="click->update-modal#removeForm"></button>
         </div>
-        <div class="modal-body">
-          <%= simple_form_for [property, transaction], html: { data: { "update-modal-target": "form" } } do |t| %>
-            <%= t.input :cash_flow_type, :collection => %w[Revenue Expense], include_blank: false %>
+        <%= simple_form_for [property, transaction], html: { data: { "update-modal-target": "form" } } do |t| %>
+          <div class="p-3">
+            <%= t.input :cash_flow_type, :collection => %w[Revenue Expense], as: :radio_buttons, wrapper_html: { class: "mb-4"},
+                    collection_wrapper_tag: 'div',
+                    collection_wrapper_class: 'category-wrapper',
+                    item_wrapper_class: 'category-item',
+                    input_html: {class: 'category-selector'},
+                    collection: Transaction::CATEGORIES %>
             <%= t.input :date %>
             <%= t.input :category, collection: ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"], include_blank: false %>
             <%= t.input :amount, placeholder: "200 AUD" %>
             <%= t.input :description, placeholder: "Electricity" %>
-        </div>
-        <div class="modal-footer">
-            <%= t.submit class: "btn btn-primary text-white" %>
-          <% end %>
-        </div>
+          </div>
+          <div class="border-top py-4">
+            <%= t.submit class: "btn btn-primary w-50 rounded-pill fs-5" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
