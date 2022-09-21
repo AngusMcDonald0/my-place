@@ -1,5 +1,4 @@
 .section {
-  height: calc(100vh - 445px);
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.799);
@@ -21,6 +20,19 @@
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 120px;
+
+    a {
+      visibility: hidden;
+      color: black;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+
+  .list:hover a {
+    visibility: visible;
   }
 
   .left-col {
@@ -41,6 +53,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-left: 3px solid white;
+    padding-left: 5px;
   }
 
   .light-green {
@@ -69,6 +83,14 @@
     margin-top: 150px;
     font-size: 24px;
   }
+
+  .transaction-description {
+    border-left: 3px solid white;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 // #######################
 
@@ -81,9 +103,9 @@
   padding-bottom: 15px;
 
   .head {
-    font-size: 24px;
+    font-size: 27px;
     margin-bottom: 10px;
-    padding-top: 5px;
+    padding-top: 10px;
   }
 
   .nav-item a {
@@ -99,30 +121,49 @@
 // }
 
 .summary-box {
-  height: calc(100vh - 596px);
-  overflow-y: scroll;
-  // margin-left: 250px;
-  justify-content: center;
+  padding: 0px;
 
-  &::-webkit-scrollbar {
-    width: 10px;
+  .transaction-list {
+    overflow-y: scroll;
+    min-height: 300px;
+    height: calc(100vh - 655px);
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      // background: #f1f1f1;
+      border-radius: 50px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #393939;
+      border-radius: 50px;
+      height: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
 
-  /* Track */
-  &::-webkit-scrollbar-track {
-    // background: #f1f1f1;
-    border-radius: 50px;
-  }
+  .summary-footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #393939;
+    color: white;
+    height: 50px;
+    padding: 0px 181px 0px;
+    border-radius: 0px 0px 5px 5px;
 
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: #393939;
-    border-radius: 50px;
-    height: 5px;
-  }
-
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    .total {
+      padding: 5px 10px 5px 10px;
+      border-radius: 30px;
+    }
   }
 }
