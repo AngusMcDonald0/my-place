@@ -10,7 +10,6 @@
           <%= simple_form_for [property, transaction], html: { data: { "update-modal-target": "form" } } do |t| %>
             <%= t.input :cash_flow_type, :collection => %w[Revenue Expense], include_blank: false %>
             <%= t.input :date %>
-            <%# t.input :frequency, collection: [ ["weekly", 7], ["monthly", 30], ["quarterly", 120] ] %>
             <%= t.input :category, collection: ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"], include_blank: false %>
             <%= t.input :amount, placeholder: "200 AUD" %>
             <%= t.input :description, placeholder: "Electricity" %>
