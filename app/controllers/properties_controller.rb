@@ -4,6 +4,12 @@ class PropertiesController < ApplicationController
   def index
     @properties = Property.all
     @property = Property.new
+    @markers = @properties.geocoded.map do |property|
+      {
+        lat: property.latitude,
+        lng: property.longitude
+      }
+    end
   end
 
   def show
@@ -44,7 +50,7 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
     @property.user = current_user
     if @property.save
-      redirect_to property_path(@property), alert: "Property Created!"
+      redirect_to property_path(@property), notice: "Property Created!"
     else
       render :new, status: :unprocessable_entity
     end

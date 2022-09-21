@@ -3,7 +3,7 @@
     <%= link_to property_path(property), class: "index-card" do %>
       <img src="https://i2.au.reastatic.net/1000x750-format=webp/11cec2902a7318a9a7ece6decc7058aea782bc3b2fd99dfcbcd13f0e6458bc67/image.jpg" />
       <div class="index-card-product-infos">
-        <h2><%= property.address %></h2>
+        <h2><%= property.address %>, <%= property.suburb %>, <%= property.state %></h2>
         <p>Product description with <strong>relevant info</strong> only.</p>
       </div>
     <%end%>

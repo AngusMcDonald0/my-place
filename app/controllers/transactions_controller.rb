@@ -64,8 +64,9 @@ class TransactionsController < ApplicationController
   def destroy
     @property = @transaction.property
     @transaction.destroy
-    redirect_to property_path(@property), status: :see_other
+    redirect_to property_path(@property), status: :see_other, alert: "Transaction removed"
   end
+
   private
 
   def set_transaction
