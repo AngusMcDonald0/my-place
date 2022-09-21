@@ -1,0 +1,27 @@
+.filter-dropdown {
+  display: flex;
+  justify-content: flex-end;
+  width: 83%;
+  position: relative;
+}
+
+.filter-dropdown form {
+  position: absolute;
+  top: -48px;
+  right: -150px;
+}
+
+#filter {
+  border-radius: 5px;
+}
+
+.filter-btn {
+  background-color: $primary;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #c27f19;
+  }
+}
