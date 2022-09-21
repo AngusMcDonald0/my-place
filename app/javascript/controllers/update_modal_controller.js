@@ -5,6 +5,7 @@ export default class extends Controller {
   static targets = [ ]
 
   connect() {
+    console.log("connected")
   }
 
   updateForm(e) {
@@ -19,7 +20,11 @@ export default class extends Controller {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        this.element.insertAdjacentHTML("afterbegin", data.form)
       })
+  }
+
+  removeForm(e) {
+    this.element.children[0].remove();
   }
 }

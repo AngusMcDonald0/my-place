@@ -4,7 +4,14 @@
   right: 16px;
   z-index: 1000;
   font-weight: bold;
-  color: #1e3454;
-  background-color: #f39f1f;
+  color: white;
   border-radius: 8px;
+}
+
+.alert-warning {
+  background-color: #cf130d;
+}
+
+.alert-info {
+  background-color: $primary;
 }

@@ -5,8 +5,30 @@
   margin-bottom: 20px;
 }
 
-.transaction-container {
+.transaction-container .transaction-edit-btn {
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
+  &:hover {
+    color: blue;
+  }
+}
+
+.transaction-container .transaction-delete-btn {
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:hover {
+    color: red;
+    cursor: inherit;
+  }
+}
+
+.transaction-container {
   .details {
     width: 1027px;
     margin-top: 10px;
@@ -24,11 +46,12 @@
     a {
       visibility: hidden;
       color: black;
+      font-size: 18px;
     }
 
-    a:hover {
-      color: $primary;
-    }
+    // a:hover {
+    //   color: $primary;
+    // }
   }
 
   .list:hover a {
@@ -37,6 +60,9 @@
 
   .left-col {
     width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .desc-col {
@@ -90,6 +116,8 @@
     padding-right: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 75%;
   }
 }
 // #######################

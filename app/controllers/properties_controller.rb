@@ -45,7 +45,7 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
     @property.user = current_user
     if @property.save
-      redirect_to property_path(@property), alert: "Property Created!"
+      redirect_to property_path(@property), notice: "Property Created!"
     else
       render :new, status: :unprocessable_entity
     end

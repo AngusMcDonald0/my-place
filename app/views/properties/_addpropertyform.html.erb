@@ -5,13 +5,13 @@
         <h5 class="modal-title" id="exampleModalLabel">Add New Property</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <%= simple_form_for(@property, html: { class: "w-100" }) do |f| %>
         <div class="modal-body">
-          <%= simple_form_for(@property, html: { class: "w-100" }) do |f| %>
           <div class="row mb-4">
             <div class="col-6">
               <%= f.input :address,
                 input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
-                 wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+                wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
               %>
             </div>
             <div class="col-6">
@@ -27,9 +27,9 @@
           <%= f.input :photo, as: :file, wrapper_html: { class: "mb-4" } %>
         </div>
         <div class="modal-footer justify-content-center">
-            <%= f.submit class: "btn btn-primary w-50 rounded-pill", value: "Create", id: "create-button"%>
-          <% end %>
-      </div>
+          <%= f.submit class: "btn btn-primary w-50 rounded-pill", value: "Create", id: "create-button"%>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
