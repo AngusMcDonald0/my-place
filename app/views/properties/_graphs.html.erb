@@ -25,12 +25,13 @@
     </div>
   </div>
   <div class="summary-card row mb-4">
-    <div class="statsOverview--header">
-        <h2 class="text-white">Suburb Overview for <b><%= @suburb_overview["suburbName"] %></b></h2>
+    <div class="summaryOverview--header">
+        <h2 class="text-white">Suburb Overview for <b><%= @suburb_overview["suburbName"] %> (<%=@property.postcode %>)</b></h2>
     </div>
-      <p>The percentage of the suburb that are renters: <b><%= @suburb_overview["data"]["renterPercentage"] %></b></p>
+    <div class = "summary-card-info">
+      <p>The percentage of the suburb that are renters: <b><%= ((@suburb_overview["data"]["renterPercentage"]) * 100).round() %>%</b></p>
       <p> The most common age bracket living in the area: <b><%= @suburb_overview["data"]["mostCommonAgeBracket"] %></b></p>
-      <p>The average rent for a <%= @property.bedrooms %> bedrooms <%= @property.property_type%> in <%= @property.suburb%> is <b>$<%= @suburb_overview["data"]["propertyCategories"].select {|prop| prop["propertyCategory"] == @property.property_type.capitalize && prop["bedrooms"] == @property.bedrooms}.map {|prop| prop["medianRentPrice"]}.first %> per week </b></p>
+      <p>The average rent for a <%= @property.bedrooms %> bedroom <%= @property.property_type%> in <%= @property.suburb%> is <b>$<%= @suburb_overview["data"]["propertyCategories"].select {|prop| prop["propertyCategory"] == @property.property_type.capitalize && prop["bedrooms"] == @property.bedrooms}.map {|prop| prop["medianRentPrice"]}.first.to_i %> per week </b></p>
     </div>
   </div>
 </div>
