@@ -1,0 +1,102 @@
+.primary-navigation {
+  &.primary-navigation {
+    margin: 0 auto;
+    display: block;
+
+    text-align: center;
+    // font-size: 16px;
+
+    ul li {
+      list-style: none;
+      margin: 0 auto;
+      border-left: 4px solid #1e3454;
+      display: inline-block;
+      padding: 0 30px;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    ul li a{
+      color: #1e3454;
+    }
+
+    li {
+      color: black;
+    }
+
+    li:hover {
+      color:rgba(0, 0, 0, 0.70);
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    ul li ul {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      padding-left: 0;
+      left: 0;
+      display: none;
+      // background:rgba(240, 235, 235, 0.85);
+      background: rgb(255,255,255);
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(251,251,251,0.915) 75%, rgba(242,242,242,.88) 100%);    }
+
+    ul li:hover > ul,
+    ul li ul:hover {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      min-width: 250px;
+      text-align: left;
+      padding-top: 20px;
+      box-shadow: 0px 3px 5px -1px #ccc;
+    }
+
+    ul li ul li {
+      clear: both;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+      border-style: none;
+    }
+
+    ul li ul li a:hover {
+      padding-left: 10px;
+      border-left: 4px solid #F39F1F;
+      transition: all 0.3s ease;
+      color: #F39F1F;
+    }
+  }
+
+
+  a {
+      text-decoration: none;
+      &:hover {
+          color: #F39F1F;
+      }
+  }
+  ul li ul li a { transition: all 0.12s ease; }
+  #arrowdown{
+    color: #1e3454;
+    font-size: 21px;
+    padding-left: 5px;
+  }
+
+}
+
+// #test8:hover{
+//   opacity: .85;
+// }
+
+#addressdrop{
+  z-index: 1;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 10px;
+  box-shadow: 8px 8px 5px 0px;
+  // border-left: 4px solid #1e3454;
+}

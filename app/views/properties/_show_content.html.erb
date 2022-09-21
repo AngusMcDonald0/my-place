@@ -1,0 +1,23 @@
+<div class="container" data-controller="update-modal" data-submit-transaction-target="page">
+
+  <div class="col-6" data-transactions-target="form">
+    <%= render "transactions/modal" %>
+  </div>
+
+  <%= render "properties/key_statistics", property: @property %>
+
+  <div class="transaction-container">
+    <div class="tab-content">
+
+      <div class="tab-pane container active" id="transactions">
+        <div class="section">
+          <%= render "properties/transactions" %>
+        </div>
+      </div>
+
+      <div class="tab-pane container fade" id="graphs">
+        <%= render "properties/graphs" %>
+      </div>
+    </div>
+  </div>
+</div>
