@@ -1,11 +1,13 @@
 <section class="dashboard-header">
   <div class="dashboard-container">
     <div class="dashboard-row">
-      <div class="col-lg-6">
-        <h2 class="dash-property text-start">Welcome back <%= current_user.first_name %></h2>
+      <div class="col-lg-4">
+        <h2 class="dash-property text-start">Welcome back, <%= current_user.first_name %></h2>
       </div>
-
-      <div class="col-lg-6 d-flex align-items-center justify-content-end">
+      <div class="col-lg-4">
+        <h2 class="dash-property2">Properties Summary</h2>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-end">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="add-property-button">
           +Add Property
