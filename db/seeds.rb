@@ -62,17 +62,17 @@ puts "#{property2.address} seeded"
 
 # SEED CREATE
 property3 = Property.create!(
-  address: "61 Stawell Street",
+  address: "460 Glenferrie Road",
   bedrooms: 2,
-  suburb: "Richmond",
+  suburb: "Hawthorn",
   state: "VIC",
-  postcode: 3121,
+  postcode: 3122,
   user: angus,
   property_type: "unit"
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/c2d47097b4bd822aa16b9ca5592f0c2ce0d18e3383228f3f97ff07eb45763321/image.jpg")
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/d227f6150f1f524e8f83b09d213c21d070d93a9529c9d5b5ce0632013afcc438/image.jpg")
 property3.photo.attach(io: file, filename: property3.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/1daa0a8bb756433bf553ed0d7f9c67c341696023195bc695ab3ba852efaae157/image.jpg")
