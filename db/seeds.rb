@@ -143,7 +143,7 @@ transaction6 = Transaction.create!(
   description: "Rental Weekly Income"
 )
 
-transaction6 = Transaction.create!(
+transaction7 = Transaction.create!(
   property: property1,
   cash_flow_type: "Revenue",
   category: "Rental Income",
@@ -161,13 +161,49 @@ transaction8 = Transaction.create!(
   description: "Rental Weekly Income"
 )
 
-transaction7 = Transaction.create!(
+transaction9 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
   category: "Mortgage",
   date: DateTime.new(2022,9,12),
   amount: 500,
   description: "Mortgage Repayment"
+)
+
+transaction10 = Transaction.create!(
+  property: property1,
+  cash_flow_type: "Revenue",
+  category: "Rental Income",
+  date: DateTime.new(2022,8,8),
+  amount: 300,
+  description: "Rental Weekly Income"
+)
+
+transaction11 = Transaction.create!(
+  property: property1,
+  cash_flow_type: "Revenue",
+  category: "Rental Income",
+  date: DateTime.new(2022,8,15),
+  amount: 300,
+  description: "Rental Weekly Income"
+)
+
+transaction12 = Transaction.create!(
+  property: property1,
+  cash_flow_type: "Revenue",
+  category: "Rental Income",
+  date: DateTime.new(2022,8,22),
+  amount: 300,
+  description: "Rental Weekly Income"
+)
+
+transaction13 = Transaction.create!(
+  property: property1,
+  cash_flow_type: "Expense",
+  category: "Maintenance",
+  date: DateTime.new(2022,8,20),
+  amount: 300,
+  description: "Roof leak"
 )
 
 # property two
