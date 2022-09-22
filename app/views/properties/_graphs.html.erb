@@ -18,16 +18,16 @@
         {name: @property.address, data: @single},
         {name: "Your Average", data: @average}
       ],
-      title: "Property Comparison", colors: ["#84a59d","#219ebc"], prefix: "$" %>
+      title: "Property Comparison", colors: ["#06d6a0","#219ebc"], prefix: "$" %>
     </div>
   </div>
 
   <div class="graph-card row mb-4">
     <div class="col-6">
-      <%= bar_chart [["Revenue",  @revenue],["Expense", @expense]], prefix: "$", colors: ["#84a59d","#e56b6f", "#f28482", "#f7ede2", "#f5cac3", "#84a59d",], donut:true, title: "Total Revenue & Expenses" %>
+      <%= bar_chart [["Revenue",  @month_revenue],["Expense", @month_expense]], prefix: "$", colors: ["#118ab2","ef476f"], title: "Total Revenue & Expenses" %>
     </div>
     <div class="col-6">
-      <%= pie_chart @single,colors: ["#eaac8b","#e56b6f", "#b56576", "#6d597a", "#355070"], donut:false, title: "Detailed Expenses", prefix: "$" %>
+      <%= pie_chart @single,colors: ["#ef476f","#ffd166", "#118ab2", "#6d597a", "#355070"], donut:false, title: "Detailed Expenses", prefix: "$" %>
     </div>
   </div>
   <div class="summary-card row mb-4">
@@ -35,9 +35,9 @@
         <h2 class="text-white">Suburb Overview for <b><%= @suburb_overview["suburbName"] %> (<%=@property.postcode %>)</b></h2>
     </div>
     <div class = "summary-card-info">
-      <p>The percentage of the suburb that are renters: <b class="summary-card-text"><%= ((@suburb_overview["data"]["renterPercentage"]) * 100).round()%>%</b></p>
-      <p> The most common age bracket living in the area: <b class="summary-card-text"><%= @suburb_overview["data"]["mostCommonAgeBracket"] %></b></p>
-      <p>The average rent for a <%= @property.bedrooms %> bedroom <%= @property.property_type%> in <%= @property.suburb%> is <b class="summary-card-text">$<%= @suburb_overview["data"]["propertyCategories"].select {|prop| prop["propertyCategory"] == @property.property_type.capitalize && prop["bedrooms"] == @property.bedrooms}.map {|prop| prop["medianRentPrice"]}.first.to_i %> per week </b></p>
+        <p>The percentage of the suburb that are renters: <b class="summary-card-text"><%= ((@suburb_overview["data"]["renterPercentage"]) * 100).round()%>%</b></p>
+        <p> The most common age bracket living in the area: <b class="summary-card-text"><%= @suburb_overview["data"]["mostCommonAgeBracket"] %></b></p>
+        <p>The average rent for a <%= @property.bedrooms %> bedroom <%= @property.property_type%> in <%= @property.suburb%> is <b class="summary-card-text">$<%= @suburb_overview["data"]["propertyCategories"].select {|prop| prop["propertyCategory"] == @property.property_type.capitalize && prop["bedrooms"] == @property.bedrooms}.map {|prop| prop["medianRentPrice"]}.first.to_i %> per week </b></p>
     </div>
   </div>
 </div>

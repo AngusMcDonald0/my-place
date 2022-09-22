@@ -4,7 +4,7 @@
       <div class="col-lg-4">
         <nav role="navigation" class="primary-navigation">
           <ul>
-            <li class="dash-property text-start"><div id="test8"><%=property.address%><a href="#" id="arrowdown">&dtrif;</a></div>
+            <li class="show-property text-start"><div id="test8"><%=property.address%><a href="#" id="arrowdown">&dtrif;</a></div>
               <ul class="dropdown" id="addressdrop">
               <% @properties.each do |property| %>
                 <li><%= link_to property.address, property_path(property) %></li>
@@ -48,6 +48,4 @@
     </div>
 
   </div>
-
-
 </section>

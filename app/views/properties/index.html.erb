@@ -17,7 +17,7 @@
             <% Property.all.each do |property| %>
               <% data_hash[property.address] = property.total_profit %>
             <% end %>
-            <%= column_chart data_hash, title: "All Properties (Net Income)", prefix: "$", download: {background: "#ffffff"}, colors: ["#f6bd60", "#84a59d", "#f7ede2", "#f5cac3", "#f28482"] %>
+            <%= column_chart data_hash, title: "All Properties (Net Income)", prefix: "$", download: {background: "#ffffff"}, colors: ["#6a4c93", "#1982c4", "#8ac926", "#ffca3a", "#ff595e"] %>
           </div>
         </div>
         <div class="maping">
@@ -41,7 +41,51 @@
       </div>
 
     <div class="col-6 propertybox">
+
       <%= render @properties %>
+
+     # <% @properties.each do |property| %>
+#   <%= link_to property_path(property), class: "indexpanel" do %>
+#     <div class="indexOverview--header">
+#       <p class="indexOverview--headerIn">
+#         <h2><%= property.address%></h2>
+#       </p>
+#     </div>
+#     <div class="row index-card-row">
+#       <div class="col-8 index-card-img">
+#         <%= cl_image_tag property.photo.key, id: "propimg" %>
+#       </div>
+#       <div class="col-4 index-card-summary">
+#           <ul>
+#             <li class="d-flex pt-5">
+#               <i class="fa-solid fa-bed text-warning"></i>
+#               <p><%= property.bedrooms %></p>
+#             </li>
+#             <li class="d-flex">
+#               <% if property.property_type == "unit" %>
+#                 <i class="fa-solid fa-building text-black "></i>
+#                 <p>Unit</p>
+#               <% else %>
+#                 <i class = "fa-solid fa-house text-black "></i>
+#                 <p> House</p>
+#               <% end %>
+#               <li class="d-flex">
+#                 <i class="<%= property.profitable? %>"></i>
+#                 <p>$<%= property.total_profit.to_i %></p>
+#               </li>
+#               <li class="d-flex">
+#                 <p><i class="fa-solid fa-building-columns text-black"></i>$<%= rand(300000..500000) %></p>
+#               </li>
+#             </li>
+#             <li class="d-flex">
+#               <p></i><%= rand(Date.civil(2022, 1, 1)..Date.civil(2022, 12, 31))%> till <%= rand(Date.civil(2023, 1, 1)..Date.civil(2023, 12, 31))%></p>
+#             </li>
+#           </ul>
+#         </div>
+#     </div>
+#   <% end %>
+# <% end %>
+
     </div>
   </div>
 </div>

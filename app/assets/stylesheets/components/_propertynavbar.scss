@@ -9,6 +9,13 @@
   padding-left: calc(5% + 1.5rem * 0.5);
   margin-right: auto;
   margin-left: auto;
+
+  .show-property {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0px;
+   }
 }
 
 .dashboard-row {
@@ -23,22 +30,6 @@
     font-size: 20px;
     border-radius: 5px;
   }
-}
-
-.dash-property {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 18px;
-  margin: 0px;
- }
-
-.dash-property2 {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 20px;
-  margin: 0px;
-  font-weight: bold;
-  text-align: center;
 }
 
 #add-transaction-button {
