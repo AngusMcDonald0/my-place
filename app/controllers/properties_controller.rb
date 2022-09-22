@@ -15,7 +15,7 @@ class PropertiesController < ApplicationController
   def show
     @properties = Property.all
     @property = Property.find(params[:id])
-    # @transactions = @property.transactions.sort_by(&:date).reverse
+    @transactions = @property.transactions.sort_by(&:date).reverse
     if params[:filter].present?
       if params[:filter] == "Show All"
         @transactions = @property.transactions.sort_by(&:date).reverse

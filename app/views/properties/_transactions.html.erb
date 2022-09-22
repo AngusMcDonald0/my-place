@@ -1,5 +1,6 @@
 <div class="transaction-container">
   <div class="label">
+    <div class="scroll-fade"></div>
     <div class="head">Transaction Summary</div>
     <div class="row">
 
@@ -131,7 +132,7 @@
           <div class="summary-footer">
             <% if @current_count.negative? %>
               <div class="total light-red">
-                Net Cash Flow = $<%= @current_count * -1 %> <i class="red fa-solid fa-caret-down ps-2"></i>
+                Net Cash Flow = -$<%= @current_count * -1 %> <i class="red fa-solid fa-caret-down ps-2"></i>
               </div>
             <% else %>
               <div class="total light-green">
