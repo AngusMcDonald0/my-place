@@ -14,11 +14,11 @@ angus.avatar.attach(io: my_photo, filename: "angus")
 
 # SEED CREATE
 property1 = Property.create!(
-  address: "450 Elizabeth Street",
+  address: "32 Liddiard St, Hawthorn, VIC, 3122",
   bedrooms: 2,
-  suburb: "Melbourne",
+  suburb: "Hawthorn",
   state: "VIC",
-  postcode: "3000",
+  postcode: "3122",
   user: angus,
   property_type: "unit"
 )
@@ -38,7 +38,7 @@ puts "#{property1.address} seeded"
 
 # SEED CREATE
 property2 = Property.create!(
-  address: "25 Valley Parade",
+  address: "25 Valley Parade, Glen Iris, VIC, 3146",
   bedrooms: 4,
   suburb: "Glen Iris",
   state: "VIC",
@@ -62,7 +62,7 @@ puts "#{property2.address} seeded"
 
 # SEED CREATE
 property3 = Property.create!(
-  address: "460 Glenferrie Road",
+  address: "460 Glenferrie Road, Hawthorn, VIC, 3122",
   bedrooms: 2,
   suburb: "Hawthorn",
   state: "VIC",
