@@ -2,9 +2,14 @@
   &.primary-navigation {
     margin: 0 auto;
     display: block;
+    margin-left: -200px;
 
     text-align: center;
     // font-size: 16px;
+
+    ul {
+      margin-bottom: 0px;
+    }
 
     ul li {
       list-style: none;
@@ -42,7 +47,8 @@
       display: none;
       // background:rgba(240, 235, 235, 0.85);
       background: rgb(255,255,255);
-      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(251,251,251,0.915) 75%, rgba(242,242,242,.88) 100%);    }
+      // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(251,251,251,0.915) 75%, rgba(242,242,242,.88) 100%);
+      }
 
     ul li:hover > ul,
     ul li ul:hover {
@@ -97,6 +103,6 @@
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   border-top-left-radius: 10px;
-  box-shadow: 8px 8px 5px 0px;
+  box-shadow: 4px 4px 5px 0px;
   // border-left: 4px solid #1e3454;
 }
