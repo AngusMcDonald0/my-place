@@ -1,0 +1,81 @@
+.index-property-card {
+  color: black;
+
+  &:hover {
+    color: inherit;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #555555;
+  }
+}
+
+.index-property-image {
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  box-shadow: 3px 5px 10px rgba(0,0,0,0.1);
+  position: relative;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    margin-bottom: -2.5px;
+  }
+
+  i {
+    margin-right: 10px;
+    width: 22px;
+    text-align: center;
+  }
+
+  .blur-background {
+    position: absolute;
+    bottom: -38px;
+    left: -14px;
+    width: 110%;
+    height: 140px;
+    filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.78);
+  }
+
+  .property-address, .property-key-info {
+    height: 100px;
+    padding-left: 20px;
+    text-align: start;
+    z-index: 1;
+  }
+
+  .property-address {
+    display: flex;
+    align-items: center;
+    border-right: 1.5px solid rgba(0, 0, 0, 0.4);
+    width: 60%;
+  }
+
+
+  .property-key-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+#money-icon {
+  font-size: 24px;
+}
