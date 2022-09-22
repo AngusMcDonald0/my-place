@@ -10,8 +10,18 @@ class TransactionsController < ApplicationController
         @last = []
         @current = []
         @month = []
+        @month_revenue = 0
+        @month_expense = 0
+        @month_total = 0
         @properties = Property.all
         @transactions = @property.transactions.sort_by(&:date).reverse
+        if params[:filter].present?
+          if params[:filter] == "Show All"
+            @transactions = @property.transactions.sort_by(&:date).reverse
+          else
+            @transactions = @property.transactions.where("category ILIKE ?", "%#{params[:filter]}%")
+          end
+        end
         @past_transactions = @property.transactions.past
         @future_transactions = @property.transactions.future
         @marker = { lat: @property.latitude, lng: @property.longitude }
@@ -19,7 +29,6 @@ class TransactionsController < ApplicationController
         @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
         @revenue = @property.transactions.revenues.sum(:amount)
         @expense = @property.transactions.expenses.sum(:amount)
-        @suburb_overview = FetchPriceService.new(@property).call
         @suburb_overview = FetchPriceService.new(@property).call
         @transactions.each do |transaction|
           if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date
@@ -30,6 +39,16 @@ class TransactionsController < ApplicationController
           end
           if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year
             @month << transaction
+          end
+          if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year
+            @month << transaction
+            if transaction.cash_flow_type == "Revenue"
+              @month_revenue += transaction.amount.round
+              @month_total += transaction.amount.round
+            else
+              @month_expense += transaction.amount.round
+              @month_total -= transaction.amount.round
+            end
           end
         end
         format.html { redirect_to property_path(@property), alert: "Transaction Created!" }
