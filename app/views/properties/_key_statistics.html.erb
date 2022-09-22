@@ -1,7 +1,3 @@
-<% expense =@property.transactions.expenses.sum(:amount)%>
-<% revenue = @property.transactions.revenues.sum(:amount)%>
-<% total = revenue - expense %>
-
 <div class="row overviewGutter">
   <div class="col-md-4">
     <div class="panel">
@@ -21,10 +17,10 @@
             <div class="col-8">
               <p class="statsOverview--rangeIn">Monthly</p>
               <h3 class="statsOverview--label">Revenue</h3>
-              <p class="statsOverview--dollarIn">$<%= revenue.round() %></p>
+              <p class="statsOverview--dollarIn">$<%= @month_revenue %></p>
             </div>
             <div class="col-4">
-              <i class="fa-solid fa-money-bill-trend-up"></i>
+              <i class="green fa-solid fa-money-bill-trend-up"></i>
             </div>
           </div>
         </div>
@@ -49,7 +45,7 @@
             <div class="col-8">
               <p class="statsOverview--rangeOut">Monthly</p>
               <h3 class="statsOverview--label">Expenses</h3>
-              <p class="statsOverview--dollarOut">$<%=expense.round()%></p>
+              <p class="statsOverview--dollarOut">$<%= @month_expense %></p>
             </div>
             <div class="col-4">
               <i class="fa-solid fa-money-bill-trend-up" id="moneyflip"></i>
@@ -59,32 +55,63 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="panel">
-      <div class="statsOverview--panel">
-        <div class="statsOverview--header">
-          <p class="statsOverview--headerTotal">
-            TOTAL
-          </p>
-          <p class="statsOverview--headerTotalPercentage">
-            <i class="fa-solid fa-hand-holding-dollar"></i>
-            <%# <span>23%</span> %>
-          </p>
-        </div>
+  <% if @month_total < 0 %>
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="statsOverview--panel">
+          <div class="statsOverview--header">
+            <p class="statsOverview--headerTotal dark-red">
+              TOTAL
+            </p>
+            <p class="statsOverview--headerTotalPercentage dark-red-background">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+              <%# <span>23%</span> %>
+            </p>
+          </div>
 
-        <div class="statsOverview--body">
-          <div class="row">
-            <div class="col-8">
-              <p class="statsOverview--rangeTotal">Monthly</p>
-              <h3 class="statsOverview--label">Total</h3>
-              <p class="statsOverview--dollarTotal">$<%=total.round()%></p>
-            </div>
-            <div class="col-4">
-              <i class="fa-solid fa-money-bill-transfer"></i>
+          <div class="statsOverview--body">
+            <div class="row">
+              <div class="col-8">
+                <p class="statsOverview--rangeTotal dark-red">Monthly</p>
+                <h3 class="statsOverview--label">Total</h3>
+                <p class="statsOverview--dollarTotal dark-red">-$<%= @month_total * -1 %></p>
+              </div>
+              <div class="col-4">
+                <i class="fa-solid fa-money-bill-transfer dark-red"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <% else %>
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="statsOverview--panel">
+          <div class="statsOverview--header">
+            <p class="statsOverview--headerTotal dark-green">
+              TOTAL
+            </p>
+            <p class="statsOverview--headerTotalPercentage dark-green-background">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+              <%# <span>23%</span> %>
+            </p>
+          </div>
+
+          <div class="statsOverview--body">
+            <div class="row">
+              <div class="col-8">
+                <p class="statsOverview--rangeTotal dark-green">Monthly</p>
+                <h3 class="statsOverview--label">Total</h3>
+                <p class="statsOverview--dollarTotal dark-green">$<%= @month_total %></p>
+              </div>
+              <div class="col-4">
+                <i class="fa-solid fa-money-bill-transfer dark-green"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

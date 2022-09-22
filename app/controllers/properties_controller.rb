@@ -36,6 +36,9 @@ class PropertiesController < ApplicationController
     @last = []
     @current = []
     @month = []
+    @month_revenue = 0
+    @month_expense = 0
+    @month_total = 0
     @transactions.each do |transaction|
       if transaction.date < "2022-07-01".to_date && transaction.date > "2021-06-30".to_date
         @last << transaction
@@ -45,6 +48,13 @@ class PropertiesController < ApplicationController
       end
       if transaction.date.month == Time.now.month && transaction.date.year == Time.now.year
         @month << transaction
+        if transaction.cash_flow_type == "Revenue"
+          @month_revenue += transaction.amount.round
+          @month_total += transaction.amount.round
+        else
+          @month_expense += transaction.amount.round
+          @month_total -= transaction.amount.round
+        end
       end
     end
   end
