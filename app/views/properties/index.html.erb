@@ -17,7 +17,7 @@
             <% Property.all.each do |property| %>
               <% data_hash[property.address] = property.total_profit %>
             <% end %>
-            <%= column_chart data_hash, title: "All Properties (Net Income)", prefix: "$", download: {background: "#ffffff"}, colors: ["#f6bd60", "#84a59d", "#f7ede2", "#f5cac3", "#f28482"] %>
+            <%= column_chart data_hash, title: "All Properties (Net Income)", prefix: "$", download: {background: "#ffffff"}, colors: ["#118ab2", "#06d6a0", "#073b4c", "#f5cac3", "#f28482"] %>
           </div>
         </div>
         <div class="maping">
@@ -45,7 +45,7 @@
         <%= link_to property_path(property), class: "indexpanel" do %>
           <div class="indexOverview--header">
             <p class="indexOverview--headerIn">
-              <h2><%= property.address%>, <%= property.suburb %>, <%= property.state %></h2>
+              <h2><%= property.address%></h2>
             </p>
           </div>
           <div class="row index-card-row">
