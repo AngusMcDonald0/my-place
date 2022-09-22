@@ -152,6 +152,15 @@ transaction6 = Transaction.create!(
   description: "Rental Weekly Income"
 )
 
+transaction8 = Transaction.create!(
+  property: property1,
+  cash_flow_type: "Revenue",
+  category: "Rental Income",
+  date: DateTime.new(2022,9,15),
+  amount: 300,
+  description: "Rental Weekly Income"
+)
+
 transaction7 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
@@ -162,12 +171,12 @@ transaction7 = Transaction.create!(
 )
 
 # property two
-5.times do
+7.times do
   transaction = Transaction.create!(
   property: property2,
   cash_flow_type: "Expense",
   category: category.sample,
-  date: DateTime.new(2022, 9, rand(1..15)),
+  date: DateTime.new(2022, 9, rand(1..20)),
   amount: rand(100..200),
   description: description.sample
 )
@@ -178,7 +187,7 @@ transaction20 = Transaction.create!(
   cash_flow_type: "Revenue",
   category: category.sample,
   date: DateTime.new(2022, 9, 2),
-  amount: 1300,
+  amount: 1000,
   description: "Rental Income"
 )
 
@@ -187,7 +196,16 @@ transaction21 = Transaction.create!(
   cash_flow_type: "Revenue",
   category: category.sample,
   date: DateTime.new(2022, 9, 9),
-  amount: 1300,
+  amount: 1000,
+  description: "Rental Income"
+)
+
+transaction23 = Transaction.create!(
+  property: property2,
+  cash_flow_type: "Revenue",
+  category: category.sample,
+  date: DateTime.new(2022, 9, 16),
+  amount: 1000,
   description: "Rental Income"
 )
 
@@ -216,8 +234,8 @@ transaction30 = Transaction.create!(
   property: property3,
   cash_flow_type: "Revenue",
   category: category.sample,
-  date: DateTime.new(2022, 9, 1),
-  amount: 800,
+  date: DateTime.new(2022, 9, 8),
+  amount: 450,
   description: "Rental Income"
 )
 
@@ -226,7 +244,25 @@ transaction31 = Transaction.create!(
   cash_flow_type: "Revenue",
   category: category.sample,
   date: DateTime.new(2022, 9, 1),
-  amount: 800,
+  amount: 450,
+  description: "Rental Income"
+)
+
+transaction34 = Transaction.create!(
+  property: property3,
+  cash_flow_type: "Revenue",
+  category: category.sample,
+  date: DateTime.new(2022, 9, 15),
+  amount: 450,
+  description: "Rental Income"
+)
+
+transaction36 = Transaction.create!(
+  property: property3,
+  cash_flow_type: "Revenue",
+  category: category.sample,
+  date: DateTime.new(2022, 9, 21),
+  amount: 450,
   description: "Rental Income"
 )
 
