@@ -9,8 +9,8 @@
     <%= t.input :date %>
     <%# t.input :frequency, collection: [ ["weekly", 7], ["monthly", 30], ["quarterly", 120] ] %>
     <%= t.input :category, collection: ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"], include_blank: false %>
-    <%= t.input :amount, placeholder: "200 AUD" %>
-    <%= t.input :description, placeholder: "Electricity" %>
+    <%= t.input :amount, placeholder: "AUD" %>
+    <%= t.input :description, placeholder: "eg. Electricity" %>
     <div class="modal-footer justify-content-center">
       <%= t.submit class: "btn btn-primary w-50 rounded-pill", value: "Create", id: "create-button" %>
     </div>

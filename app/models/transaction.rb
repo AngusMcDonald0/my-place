@@ -10,6 +10,7 @@ class Transaction < ApplicationRecord
   scope :maintenances, -> { where(category: "Maintenance") }
   scope :utilities, -> { where(category: "Utility") }
   scope :mortgages, -> { where(category: "Mortgage") }
+  scope :income, -> { where(category: "Rental Income") }
   scope :others, -> { where(category: "Other") }
   belongs_to :property
   CATEGORIES = ["Revenue", "Expense"]
