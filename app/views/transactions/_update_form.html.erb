@@ -15,7 +15,7 @@
                     input_html: {class: 'category-selector'},
                     collection: Transaction::CATEGORIES %>
             <%= t.input :date %>
-            <%= t.input :category, collection: ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"], include_blank: false %>
+            <%= t.input :category, collection: ["Maintenance", "Mortgage", "Rental Income", "Utilities", "Other"] %>
             <%= t.input :amount, placeholder: "200 AUD" %>
             <%= t.input :description, placeholder: "Electricity" %>
           </div>

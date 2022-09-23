@@ -2,6 +2,7 @@ class Transaction < ApplicationRecord
   attr_accessor :frequency
 
   validates :amount, presence: true
+  validates :category, presence: true
 
   scope :future, -> { where("date > ?", Date.today) }
   scope :past, -> { where("date <= ?", Date.today) }
