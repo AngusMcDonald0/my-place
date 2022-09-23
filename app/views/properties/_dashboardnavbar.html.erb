@@ -1,8 +1,8 @@
 <section class="dashboard-header">
   <div class="dashboard-container">
     <div class="dashboard-row">
-      <div class="col-lg-4">
-        <h2 class="dash-property text-start">Welcome back <b><%= current_user.first_name %></b></h2>
+      <div class="col-lg-4 d-flex">
+        <h2 class="dash-property text-start" data-controller="typed-js" data-typed-js-name-value="<%= current_user.first_name %>"></h2>
       </div>
       <div class="col-lg-4">
         <h2 class="dash-property2">Properties Summary</h2>
@@ -16,20 +16,6 @@
     </div>
 
   </div>
-
-    <!-- <div id="typed-strings">
-      <h2>Welcome back <%= current_user.first_name %></h2>
-      <p>Your properties await</p>
-    </div>
-    <span id="typed"></span>
-
-    <script>
-      var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        backSpeed: 40,
-        typeSpeed: 40
-      });
-    </script> -->
 
     <%# <p><span data-controller="typed-js"></span></p> %>
 
