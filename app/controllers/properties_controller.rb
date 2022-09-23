@@ -23,19 +23,16 @@ class PropertiesController < ApplicationController
         @transactions = @property.transactions.where("category ILIKE ?", "%#{params[:filter]}%")
       end
     end
-    @past_transactions = @property.transactions.past
-    @future_transactions = @property.transactions.future
-    @marker = { lat: @property.latitude, lng: @property.longitude }
-    @average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h }
-    @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
-    @revenue = @property.transactions.revenues.sum(:amount)
-    @expense = @property.transactions.expenses.sum(:amount)
+    # @past_transactions = @property.transactions.past
+    # @future_transactions = @property.transactions.future
     @suburb_overview = FetchPriceService.new(@property).call
     # @suburb_number = FetchPriceService.new(@property).number
     # date categorization of transactions
     @last = []
     @current = []
     @month = []
+    # @month_revenues = []
+    # @month_expenses = []
     @month_revenue = 0
     @month_expense = 0
     @month_total = 0
@@ -51,12 +48,20 @@ class PropertiesController < ApplicationController
         if transaction.cash_flow_type == "Revenue"
           @month_revenue += transaction.amount.round
           @month_total += transaction.amount.round
+          # @month_revenues << transaction
         else
           @month_expense += transaction.amount.round
           @month_total -= transaction.amount.round
+          # @month_expenses << transaction
         end
       end
     end
+    @marker = { lat: @property.latitude, lng: @property.longitude }
+    @average = Transaction.expenses.select(:category, (:amount)).group(:category).sum(:amount).inject({}) { |h, (k, v)| h[k] = (v / @properties.count).round(); h }
+    @single =  @property.transactions.expenses.select(:category, :amount).group(:category).sum(:amount)
+    # @single_month = @month_expenses.select(:category, :amount).group(:category).sum(:amount)
+    @revenue = @property.transactions.revenues.sum(:amount)
+    @expense = @property.transactions.expenses.sum(:amount)
   end
 
   def new
