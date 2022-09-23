@@ -11,7 +11,8 @@ export default class extends Controller {
     console.log(this.nameValue);
     new Typed(this.element, {
       strings: [`Welcome back ${this.nameValue}`],
-      typeSpeed: 55
+      typeSpeed: 55,
+      showCursor: false
     })
   }
 }
