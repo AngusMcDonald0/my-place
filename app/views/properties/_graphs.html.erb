@@ -32,7 +32,7 @@
   </div>
   <div class="summary-card row mb-4">
     <div class="summaryOverview--header">
-        <h2 class="text-white">Suburb Overview for <b><%= @suburb_overview["suburbName"] %> (<%=@property.postcode %>)</b></h2>
+        <h2 class="text-white">Suburb Overview for <b><%= @suburb_overview["suburbName"] %> (<%=@property.address.split(",")[3].strip %>)</b></h2>
     </div>
     <div class = "summary-card-info">
         <p>The percentage of the suburb that are renters: <b class="summary-card-text"><%= ((@suburb_overview["data"]["renterPercentage"]) * 100).round()%>%</b></p>
