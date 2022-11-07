@@ -277,7 +277,7 @@ transaction32 = Transaction.create!(
   property: property3,
   cash_flow_type: "Expense",
   category: "Mortgage",
-  date: DateTime.new(2022, 11, 7),
+  date: DateTime.new(2022, 11, 6),
   amount: 100,
   description: "Mortgage Repayment"
 )
