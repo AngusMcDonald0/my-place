@@ -10,7 +10,7 @@
       <% end %>
       <div>
         <h3><%= property.address.split(",")[0] %></h3>
-        <p><%= property.suburb %> • <%= property.postcode %></p>
+        <p><%= property.address.split(",")[1] %> • <%= property.address.split(",")[2]%></p>
       </div>
     </div>
 

@@ -6,9 +6,10 @@ class FetchPriceService
   end
 
   def call
-    suburb = @property.suburb
-    state = @property.state
-    postcode = @property.postcode
+    suburb = @property.address.split(",")[1].strip
+    state = @property.address.split(",")[2].strip
+    postcode = @property.address.split(",")[3].strip
+
 
     id_of_suburb_response = HTTParty.get("https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=#{suburb}&state=#{state}&postcode=#{postcode}",
       headers: { "X-API-Key": ENV["DOMAIN_API_KEY"] }
