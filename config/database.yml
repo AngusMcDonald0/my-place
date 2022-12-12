@@ -21,6 +21,12 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+    # This must match what POSTGRES_USER was set to in docker-compose.yml.
+  # username: my_place
+
+  # This must be 127.0.0.1 and not localhost.
+  # host: 127.0.0.1
+
 development:
   <<: *default
   database: my_place_development
