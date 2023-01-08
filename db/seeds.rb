@@ -24,8 +24,8 @@ property1 = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/f6391341464e80312ffe382f57af5693f35f812c4385741931022cc033b5525d/image.jpg")
-property1.photo.attach(io: file, filename: property1.address)
+# file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/f6391341464e80312ffe382f57af5693f35f812c4385741931022cc033b5525d/image.jpg")
+# property1.photo.attach(io: file, filename: property1.address)
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/ac86f8eb38800c1868abb13cbddc0a19a2164c3f1470feb918f5be9fd7976a07/image.jpg")
 # properties.photo.attach(io: file, filename: properties.address)
@@ -92,7 +92,7 @@ description = ["Electrician", "Major Repairs", "Mortgage Repayment", "Rates", "W
   property: property1,
   cash_flow_type: "Expense",
   category: "Maintenance",
-  date: DateTime.new(2022, 12, 1),
+  date: DateTime.new(2023, 1, 1),
   amount: 300,
   description: "Electrical Work"
 )
@@ -101,7 +101,7 @@ transaction2 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
   category: "Maintenance",
-  date: DateTime.new(2022, 12, 3),
+  date: DateTime.new(2023, 1, 3),
   amount: 1000,
   description: "Massive Water Leak"
 )
@@ -110,7 +110,7 @@ transaction3 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
   category: "Maintenance",
-  date: DateTime.new(2022, 12, 3),
+  date: DateTime.new(2023, 1, 3),
   amount: 500,
   description: "Plaster Work"
 )
@@ -119,7 +119,7 @@ transaction4 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
   category: "Maintenance",
-  date: DateTime.new(2022, 12, 5),
+  date: DateTime.new(2023, 1, 5),
   amount: 300,
   description: "Further Plaster Work"
 )
@@ -128,7 +128,7 @@ transaction5 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
   category: "Utility",
-  date: DateTime.new(2022, 9, 10),
+  date: DateTime.new(2023, 1, 8),
   amount: 200,
   description: "Body Corp Fees"
 )
@@ -137,7 +137,7 @@ transaction6 = Transaction.create!(
   property: property1,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022,12, 1),
+  date: DateTime.new(2023, 1, 1),
   amount: 300,
   description: "Rental Weekly Income"
 )
@@ -146,7 +146,7 @@ transaction7 = Transaction.create!(
   property: property1,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 8),
+  date: DateTime.new(2023, 1, 8),
   amount: 300,
   description: "Rental Weekly Income"
 )
@@ -155,7 +155,7 @@ transaction8 = Transaction.create!(
   property: property1,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 300,
   description: "Rental Weekly Income"
 )
@@ -164,7 +164,7 @@ transaction10 = Transaction.create!(
   property: property1,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022,12,7),
+  date: DateTime.new(2023,1,7),
   amount: 300,
   description: "Rental Weekly Income"
 )
@@ -173,7 +173,7 @@ transaction9 = Transaction.create!(
   property: property1,
   cash_flow_type: "Expense",
   category: "Mortgage",
-  date: DateTime.new(2022,12,7),
+  date: DateTime.new(2023,1,7),
   amount: 500,
   description: "Mortgage Repayment"
 )
@@ -183,7 +183,7 @@ transaction9 = Transaction.create!(
   property: property2,
   cash_flow_type: "Expense",
   category: category.sample,
-  date: DateTime.new(2022, 12, rand(1..7)),
+  date: DateTime.new(2023, 1, rand(1..7)),
   amount: rand(100..200),
   description: description.sample
 )
@@ -193,7 +193,7 @@ transaction20 = Transaction.create!(
   property: property2,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 2),
+  date: DateTime.new(2023, 1, 2),
   amount: 1000,
   description: "Rental Income"
 )
@@ -202,7 +202,7 @@ transaction21 = Transaction.create!(
   property: property2,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 1000,
   description: "Rental Income"
 )
@@ -211,7 +211,7 @@ transaction23 = Transaction.create!(
   property: property2,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 1000,
   description: "Rental Income"
 )
@@ -220,7 +220,7 @@ transaction22 = Transaction.create!(
   property: property2,
   cash_flow_type: "Expense",
   category: "Mortgage",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 200,
   description: "Mortgage Repayment"
 )
@@ -231,7 +231,7 @@ transaction22 = Transaction.create!(
   property: property3,
   cash_flow_type: "Expense",
   category: category.sample,
-  date: DateTime.new(2022, 12, rand(1..7)),
+  date: DateTime.new(2023, 1, rand(1..7)),
   amount: rand(50..300),
   description: description.sample
 )
@@ -241,7 +241,7 @@ transaction30 = Transaction.create!(
   property: property3,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 450,
   description: "Rental Income"
 )
@@ -250,7 +250,7 @@ transaction31 = Transaction.create!(
   property: property3,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 1),
+  date: DateTime.new(2023, 1, 1),
   amount: 450,
   description: "Rental Income"
 )
@@ -259,7 +259,7 @@ transaction34 = Transaction.create!(
   property: property3,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 450,
   description: "Rental Income"
 )
@@ -268,7 +268,7 @@ transaction36 = Transaction.create!(
   property: property3,
   cash_flow_type: "Revenue",
   category: "Rental Income",
-  date: DateTime.new(2022, 12, 7),
+  date: DateTime.new(2023, 1, 7),
   amount: 450,
   description: "Rental Income"
 )
@@ -277,7 +277,7 @@ transaction32 = Transaction.create!(
   property: property3,
   cash_flow_type: "Expense",
   category: "Mortgage",
-  date: DateTime.new(2022, 12, 6),
+  date: DateTime.new(2023, 1, 6),
   amount: 100,
   description: "Mortgage Repayment"
 )
