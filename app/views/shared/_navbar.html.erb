@@ -10,16 +10,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <!--li class="nav-item active">
-            <%= link_to "Add Property", new_property_path(@property), class: "nav-link text-white" %>
-          </li -->
+          <li class="nav-item active">
+            <%= link_to "Add Property", new_property_path(@property), class: "nav-link text-white"  %>
+          </li>
           <li class="nav-item active">
             <%= link_to "Dashboard", properties_path, class: "nav-link text-white" %>
           </li>
 
           <li class="nav-item dropdown">
             <% if current_user.avatar.attached? %>
-              <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", controller: "toggle-class", action: "click->toggle-class#displayDrop", toggle_class_target: "toggleElement", toggle_class_active_class: "avatar--active" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", controller: "toggle-class", action: "click->toggle-class#displayDrop", toggle_class_target: "toggleElement", toggle_class_active_class: "avatar--active" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
               <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "na`vbarDropdown", data: { bs_toggle: "dropdown", controller: "toggle-class", action: "click->toggle-class#displayDrop", toggle_class_target: "toggleElement", toggle_class_active_class: "avatar--active" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
