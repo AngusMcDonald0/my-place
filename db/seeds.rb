@@ -22,6 +22,12 @@ property1 = Property.create!(
   user: angus,
   property_type: "unit"
 )
+
+# PHOTO 1
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/f6391341464e80312ffe382f57af5693f35f812c4385741931022cc033b5525d/image.jpg")
+property1.photo.attach(io: file, filename: property1.address)
+
+
 puts "#{property1.address} seeded"
 
 # SEED CREATE
@@ -34,6 +40,16 @@ property2 = Property.create!(
   user: angus,
   property_type: "house"
 )
+
+# PHOTO 1
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/8c6e3249320e8a8a1655d5e21065f42802fa1b7fb9e0ce7ab6c546aa682434c9/image.jpg")
+property2.photo.attach(io: file, filename: property2.address)
+# PHOTO 2
+# file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/d8ae76635fe5e9f7785c4fa858c92171e78d6b441a7590a78576d9b50296edcf/image.jpg")
+# properties.photo.attach(io: file, filename: properties.address)
+# # PHOTO 3
+# file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/49ae6d73b7c6d797482f24164f4b9bf7d525a8bbbfbd921e7d1769e818c181cc/image.jpg")
+# properties.photo.attach(io: file, filename: properties.address)
 
 
 puts "#{property2.address} seeded"
@@ -49,10 +65,21 @@ property3 = Property.create!(
   property_type: "unit"
 )
 
+# PHOTO 1
+file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/d227f6150f1f524e8f83b09d213c21d070d93a9529c9d5b5ce0632013afcc438/image.jpg")
+property3.photo.attach(io: file, filename: property3.address)
+# PHOTO 2
+# file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/1daa0a8bb756433bf553ed0d7f9c67c341696023195bc695ab3ba852efaae157/image.jpg")
+# properties.photo.attach(io: file, filename: properties.address)
+# # PHOTO 3
+# file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/33b8c9af1fbc1c3b8f6b6191bbd5868a3cf49e5b59eff97fb0a5d40eaa13374c/image.jpg")
+# properties.photo.attach(io: file, filename: properties.address)
+
 puts "#{property3.address} seeded"
 
 category = ["Maintenance", "Utility", "Mortgage"]
 description = ["Electrician", "Major Repairs", "Mortgage Repayment", "Rates", "Water"]
+
 
 # property one
   transaction1 = Transaction.create!(
@@ -244,7 +271,7 @@ transaction32 = Transaction.create!(
   property: property3,
   cash_flow_type: "Expense",
   category: "Mortgage",
-  date: DateTime.new(2023, 1, 6),
+  date: DateTime.new(2023, 11, 6),
   amount: 100,
   description: "Mortgage Repayment"
 )
