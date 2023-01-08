@@ -2,7 +2,7 @@ Transaction.destroy_all && Property.destroy_all && User.destroy_all if Rails.env
 require "uri"
 
 angus = User.create!(
-  email: "angus@test.com",
+  email: "tony@test.com",
   password: "123456",
   password_confirmation: "123456",
   first_name: "Angus",
