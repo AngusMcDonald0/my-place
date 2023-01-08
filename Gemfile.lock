@@ -297,7 +297,7 @@ DEPENDENCIES
   bootsnap
   capybara
   chartkick
-  cloudinary (~> 1.23)
+  cloudinary
   debug
   devise
   dotenv-rails

@@ -48,8 +48,7 @@ property2 = Property.create!(
 )
 
 # PHOTO 1
-file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/8c6e3249320e8a8a1655d5e21065f42802fa1b7fb9e0ce7ab6c546aa682434c9/image.jpg")
-property2.photo.attach(io: file, filename: property2.address)
+
 # PHOTO 2
 # file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/d8ae76635fe5e9f7785c4fa858c92171e78d6b441a7590a78576d9b50296edcf/image.jpg")
 # properties.photo.attach(io: file, filename: properties.address)
