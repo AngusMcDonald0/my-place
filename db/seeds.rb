@@ -3,7 +3,7 @@ Transaction.destroy_all && Property.destroy_all && User.destroy_all
 require "uri"
 
 angus = User.create!(
-  email: "angus@test.com",
+  email: "tony@test.com",
   password: "123456",
   password_confirmation: "123456",
   first_name: "Angus",
@@ -27,12 +27,6 @@ property1 = Property.create!(
 # PHOTO 1
 file = URI.open("https://i2.au.reastatic.net/1000x750-format=webp/f6391341464e80312ffe382f57af5693f35f812c4385741931022cc033b5525d/image.jpg")
 property1.photo.attach(io: file, filename: property1.address)
-# PHOTO 2
-# file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/ac86f8eb38800c1868abb13cbddc0a19a2164c3f1470feb918f5be9fd7976a07/image.jpg")
-# properties.photo.attach(io: file, filename: properties.address)
-# # PHOTO 3
-# file = URI.open("https://i2.au.reastatic.net/800x600-resize,extend,r=33,g=40,b=46/3c9eb34377b5830fe2e56c4a2e7c7ddde1a79c2d2b786b98e01fcd830b6f4295/image.jpg")
-# properties.photo.attach(io: file, filename: properties.address)
 
 
 puts "#{property1.address} seeded"
