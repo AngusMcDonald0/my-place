@@ -22,14 +22,28 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
     # This must match what POSTGRES_USER was set to in docker-compose.yml.
-  # username: my_place
+  username: my_place
 
   # This must be 127.0.0.1 and not localhost.
-  # host: 127.0.0.1
+  host: 127.0.0.1
+
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   host: db
+#   username: postgres
+#   password: password
+#   pool: 5
+
+
 
 development:
   <<: *default
   database: my_place_development
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
